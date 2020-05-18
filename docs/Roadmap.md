@@ -65,37 +65,17 @@ Supported
 * *iOS*
 
 #### Languages
-Supported
-* Python (3.5, 3.6, 3.7)
-* C++
-* C#
-* C
-* Ruby (community project)
-* Java
-* Javascript - Node.js (Preview)
+Supported languages are listed in [API Documentation](../README.md#api-documentation). The team is not actively working on other language bindings at this time. If there is a missing API, please file a request in [Issues](https://github.com/microsoft/onnxruntime/issues). Community contributions are welcome for other languages.
 
 
 ### Accelerators and Execution Providers
 #### New EPs
 To achieve the best performance on a growing set of compute targets across cloud and the intelligent edge, we invest in and partner with hardware partners and community members to add new execution providers. The flexible pluggability of ONNX Runtime is critical to support a broad range of scenarios and compute options.
 
-Supported
+Supported EPs are listed [here](../README.md#supported-accelerators). Upcoming EPs include:
 
-* MLAS (Microsoft Linear Algebra Subprograms)
-* Intel DNNL / MKL-ML
-* Intel nGraph
-* NVIDIA CUDA
-* NVIDIA TensorRT
-* Intel OpenVINO
-* Microsoft Direct ML
-* Nuphar Model Compiler (Preview)
-* Android NN API (Preview)
-* ARM Compute Library (Preview)
-* Rockchip NPU (Preview)
-
-*Future*
-* *AMD GPU*
-* *Xilinx FPGA*
+* AMD GPU
+* Xilinx FPGA
 
 
 #### CUDA operator coverage
@@ -108,9 +88,8 @@ In addition to new execution providers, we aim to make it easy for community par
 Performance is a key focus for ONNX Runtime. From latency to memory utilization to CPU usage, we are constantly seeking strategies to deliver the best performance. Although DNNs are rapidly driving research areas for innovation, we acknowledge that in practice, many companies and developers are still using traditional ML frameworks for reasons ranging from expertise to privacy to legality. As such, ONNX Runtime is focused on improvements and support for both DNNs and traditional ML. 
 
 #### Examples of projects the team is working on:
-* Improvements to batch processing for scikit-learn models
 * More quantization support
-* Improved multithreading (e.g. smarter work sharding, consolidation of different types of thread pools, user supplied thread pools, etc)
+* Improved multithreading (e.g. smarter work sharding, user supplied thread pools, etc)
 * Graph optimizations
 * Intelligent graph partitioning to maximize the value of different accelerators
 
@@ -122,11 +101,10 @@ The ONNX spec focuses on ML model interoperability rather than coverage of all o
 We aim to continuously improve coverage to support popular as well as new state-of-the-art models.
 
 #### Spec coverage 
-As more operators are added to the ONNX spec, ONNX Runtime will provide implementations (default CPU and GPU-CUDA) of each to stay in compliance with the latest ONNX spec. 
+As more operators are added to the ONNX spec, ONNX Runtime will provide implementations (default CPU and GPU-CUDA) of each to stay in compliance with the latest ONNX spec.
 
-A few specific items include:
+This includes:
 * Sparse Tensor support
-* Generic function logic without separate kernels
 
 #### Investments in popular converters
 We work with the OSS and ONNX community to ensure popular frameworks can export or be converted to ONNX format. 
