@@ -388,7 +388,7 @@ a .abbr[data-original-title], a abbr[title]{
 
   .r-wrap .r-heading h3 {
     color: #fff;
-    font-size: 22px;
+    font-size: 20px;
     margin: 0;
   }
 
@@ -602,6 +602,14 @@ a .abbr[data-original-title], a abbr[title]{
 }
 .blue-title-columns h2{
     font-size: 24px;
+}
+.community-quotes h3{
+    font-size: 18px;
+    text-align: center;
+}
+.community-quotes p{
+    font-size: 16px;
+    color: #0F77D2;
 }
 #myModal .close{
     padding: 6px;
