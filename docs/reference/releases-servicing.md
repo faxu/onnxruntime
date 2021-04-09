@@ -1,7 +1,7 @@
 ---
 title: Releases and Servicing
 parent: Reference
-nav_order: 5
+nav_order: 3
 ---
 # Release and Servicing
 Releases are versioned according to [Versioning](https://github.com/microsoft/onnxruntime/blob/faxu-doc-updates/docs/Versioning.md). Official releases of ONNX Runtime are managed by the core ONNX Runtime team and packages are published roughly quarterly. For package details, see https://www.onnxruntime.ai/docs/get-started/install.html#install. ONNX Runtime releases are backwards-compatible, unless otherwise noted.

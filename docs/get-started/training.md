@@ -1,7 +1,7 @@
 ---
 title: Training
 parent: Get Started
-nav_order: 3
+nav_order: 4
 ---
 
 # Use ONNX Runtime for Training

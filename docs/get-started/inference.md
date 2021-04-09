@@ -1,21 +1,16 @@
 ---
 title: Inference
 parent: Get Started
-nav_order: 2
+nav_order: 3
 ---
 
 # Use ONNX Runtime for Inference
 
-## Docker Images
-
-* [ONNX-Ecosystem](https://github.com/onnx/onnx-docker/tree/master/onnx-ecosystem): includes ONNX Runtime (CPU, Python), dependencies, tools to convert from various frameworks, and Jupyter notebooks to help get started
-* [Additional dockerfiles](https://github.com/microsoft/onnxruntime/tree/master/dockerfiles)
 
 ## API Documentation
-
 |API|Supported Versions|Samples|
 |---|---|---|
-|[Python](https://aka.ms/onnxruntime-python)| 3.5, 3.6, 3.7, 3.8 (3.8 excludes Win GPU and Linux ARM) [Python Dev Notes](https://github.com/microsoft/onnxruntime/tree/master/docs/Python_Dev_Notes.md)| [Samples](https://github.com/microsoft/onnxruntime/tree/master/samples/#python)|
+|[Python](https://aka.ms/onnxruntime-python)| 3.6, 3.7, 3.9) [Python Dev Notes](https://github.com/microsoft/onnxruntime/tree/master/docs/Python_Dev_Notes.md)| [Samples](https://github.com/microsoft/onnxruntime/tree/master/samples/#python)|
 |[C#](../reference/api/csharp-api.md)| | [Samples](https://github.com/microsoft/onnxruntime/tree/master/samples/#C)|
 |[C++](https://github.com/microsoft/onnxruntime/blob/master/include/onnxruntime/core/session/onnxruntime_cxx_api.h)| |[Samples](https://github.com/microsoft/onnxruntime/tree/master/samples/#CC)|
 |[C](../reference/api/c-api.md)| | [Samples](https://github.com/microsoft/onnxruntime/tree/master/samples/#CC)|
@@ -24,9 +19,11 @@ nav_order: 2
 [Ruby](https://github.com/ankane/onnxruntime) (external project)| 2.4-2.7| [Samples](https://ankane.org/tensorflow-ruby)|
 |[Javascript (node.js)](../reference/api/nodejs-api.md) |12.x | [Samples](https://github.com/microsoft/onnxruntime/blob/master/samples/nodejs) |
 
+
+
 ## Supported Accelerators
 
-[Execution Providers](../reference/execution-providers)
+[Learn about Execution Providers](../reference/execution-providers)
 
 |CPU|GPU|IoT/Edge/Mobile|Other|
 |---|---|---|---|
@@ -35,19 +32,15 @@ nav_order: 2
 |[Intel nGraph](../reference/execution-providers/nGraph-ExecutionProvider.md)|[DirectML](../reference/execution-providers/DirectML-ExecutionProvider.md)|[Android Neural Networks API](../reference/execution-providers/NNAPI-ExecutionProvider.md) (*preview*)|[Xilinx Vitis-AI](../reference/execution-providers/Vitis-AI-ExecutionProvider.md) (*preview*)|
 |Intel MKL-ML *(build option)*|[AMD MIGraphX](../reference/execution-providers/MIGraphX-ExecutionProvider.md) (*preview)|[ARM-NN](../reference/execution-providers/ArmNN-ExecutionProvider.md) (*preview*)|
 
-* [Roadmap: Upcoming accelerators](https://github.com/microsoft/onnxruntime/tree/master/docs/Roadmap.md#accelerators-and-execution-providers)
 
 ## Deploying ONNX Runtime
 
 ### Cloud
 
 * ONNX Runtime can be deployed to any cloud for model inference, including [Azure Machine Learning Services](https://azure.microsoft.com/en-us/services/machine-learning-service).
-  * [Detailed instructions](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-build-deploy-onnx)
+  * [Create and accelerate ML models](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-build-deploy-onnx)
   * [AzureML sample notebooks](https://github.com/Azure/MachineLearningNotebooks/tree/master/how-to-use-azureml/deployment/onnx)
 
-* **ONNX Runtime Server (beta)** is a hosting application for serving ONNX models using ONNX Runtime, providing a REST API for prediction.
-  * [Usage details](https://github.com/microsoft/onnxruntime/tree/master/docs/ONNX_Runtime_Server_Usage.md)
-  * [Image installation instructions](https://github.com/microsoft/onnxruntime/tree/master/dockerfiles#onnx-runtime-server-preview)
 
 ### IoT and edge devices
 

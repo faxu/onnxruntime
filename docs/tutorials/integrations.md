@@ -5,6 +5,8 @@ nav_order: 5
 ---
 # Integration with other ML tools
 
+{:toc}
+
 ## Model Conversion
 ### TensorFlow
 * [TensorFlow: Object detection (efficentdet)](https://github.com/onnx/tensorflow-onnx/blob/master/tutorials/efficientdet.ipynb)
@@ -21,7 +23,7 @@ nav_order: 5
 * [Keras: Image classification (efficientnet)](https://github.com/onnx/keras-onnx/blob/master/tutorial/TensorFlow_Keras_EfficientNet.ipynb)
 * [Keras: Image classification (Densenet)](https://www.onnxruntime.ai/python/auto_examples/plot_dl_keras.html#sphx-glr-auto-examples-plot-dl-keras-py)
 * [Keras: Natural Language Processing (BERT)](https://github.com/microsoft/onnxruntime/tree/master/onnxruntime/python/tools/transformers/notebooks/Tensorflow_Keras_Bert-Squad_OnnxRuntime_CPU.ipynb)
-* [Keras: Handwritten Digit Reocognition (MNIST)](https://github.com/onnx/keras-onnx/blob/master/tutorial/TensorFlow_Keras_MNIST.ipynb)
+* [Keras: Handwritten Digit Recognition (MNIST)](https://github.com/onnx/keras-onnx/blob/master/tutorial/TensorFlow_Keras_MNIST.ipynb)
 
 ### Scikit-learn
 * [Scikit-learn samples](http://onnx.ai/sklearn-onnx/index_tutorial.html)
@@ -39,17 +41,17 @@ nav_order: 5
 * [Automated Machine Learning](https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/automated-machine-learning/classification-bank-marketing-all-features/auto-ml-classification-bank-marketing-all-features.ipynb)
 
 ## Hugging Face
-https://github.com/huggingface/transformers/blob/master/notebooks/04-onnx-export.ipynb
+* [Export and run Hugging Face Transformers with ONNX Runtime](https://github.com/huggingface/transformers/blob/master/notebooks/04-onnx-export.ipynb)
 
 ## ML.NET
 * [Automated Machine Learning](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-automl-onnx-model-dotnet?toc=/dotnet/machine-learning/how-to-guides/toc.json&bc=/dotnet/machine-learning/how-to-guides/toc.json)
 * [Inference: Object detection](https://docs.microsoft.com/en-us/dotnet/machine-learning/tutorials/object-detection-onnx)
 
 ## Azure Synapse Analytics
-https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-predict
+* [ML predictions in Synapse SQL](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-predict)
 
 ## Azure SQL Edge
-https://docs.microsoft.com/en-us/azure/azure-sql-edge/deploy-onnx
+* [ML predictions in Azure SQL Edge and Azure SQL Managed Instance](https://docs.microsoft.com/en-us/azure/azure-sql-edge/deploy-onnxJ)
 
 ## Azure Media Services
-https://github.com/Azure/live-video-analytics/tree/master/utilities/video-analysis/yolov3-onnx
+* [Azure Video Analytics: YOLOv3 and TinyYOLOv3](https://github.com/Azure/live-video-analytics/tree/master/utilities/video-analysis/yolov3-onnx)

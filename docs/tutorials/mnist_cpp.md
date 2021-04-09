@@ -1,6 +1,6 @@
 ---
 parent: Tutorials
-nav_order: 4
+nav_exclude: true 
 ---
 
 # Number recognition with MNIST in C++

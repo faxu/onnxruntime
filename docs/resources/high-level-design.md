@@ -1,5 +1,5 @@
 ---
-title: High level design
+title: Technical Design
 parent: Resources
 nav_order: 2
 ---

@@ -13,66 +13,38 @@ nav_order: 1
 * TOC placeholder
 {:toc}
 
-Use this guide to install ONNX Runtime and its dependencies, for your target operating system, hardware, accelerator, and language.
+Use this guide to install ONNX Runtime and its dependencies, for your target operating system, hardware, accelerator, and language. Details on OS versions, compilers, language versions, dependent libraries , etc can be found here: [Compatibility](../resources/compatibility.md#Environment-compatibility) 
 
-For an overview, see this [installation matrix](https://onnxruntime.ai).
-
-## Prerequisites
-
-### Linux / CPU
-
-1. English language package with the `en_US.UTF-8` locale
-
-    * Install [language-pack-en package](https://packages.ubuntu.com/search?keywords=language-pack-en)
-    * Run `locale-gen en_US.UTF-8`
-    * Run `update-locale LANG=en_US.UTF-8`
-
-### Linux / GPU
-
-1. English language package with the `en_US.UTF-8` locale
-
-    * Install [language-pack-en package](https://packages.ubuntu.com/search?keywords=language-pack-en)
-    * Run `locale-gen en_US.UTF-8`
-    * Run `update-locale LANG=en_US.UTF-8`
-
-2. CUDA 11.0.3 and cuDNN 8.0.2.4
-   * libcudart 11.0.221
-   * libcufft 10.2.1.245
-   * libcurand 10.2.1.245
-   * libcublasLt 11.2.0.252
-   * libcublas 11.2.0.252
-   * libcudnn 8.0.4
-
-Version dependencies for older ONNX Runtime releases are listed [here](../reference/execution-providers/CUDA-ExecutionProvider.html#version-dependency).
-
-### Windows / CPU
-
-1. English language package with the `en_US.UTF-8` locale
-
-2. [Visual C++ 2019 runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
+For an overview, see the [installation matrix](https://onnxruntime.ai).
 
 
-  
-### Windows / GPU
+## Requirements
+### General
+All builds require the English language package with `en_US.UTF-8` locale
+   - On Linux, install [language-pack-en package](https://packages.ubuntu.com/search?keywords=language-pack-en)
+by running `locale-gen en_US.UTF-8` and `update-locale LANG=en_US.UTF-8`
+   - On Windows, 
 
-1. English language package with the `en_US.UTF-8` locale
+###  CUDA build
+The GPU (CUDA) package requires:
 
-2. [Visual C++ 2019 runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
+  |Linux|Windows|
+  |---|---|
+  |CUDA 11.0.3 and cuDNN 8.0.2.4<br/><ul><li> libcudart 11.0.221</li><li>libcufft 10.2.1.245</li><li>libcurand 10.2.1.245</li><li>libcublasLt 11.2.0.252</li><li>libcublas 11.2.0.252</li><li>libcudnn 8.0.4</li></ul>|CUDA 11.0.3 and cuDNN 8.0.2.39|
 
-3. CUDA 11.0.3 and cuDNN 8.0.2.39
+    
+   CUDA version dependencies for older ONNX Runtime releases are listed [here](../reference/execution-providers/CUDA-ExecutionProvider.html#version-dependency).
 
-Version dependencies for older ONNX Runtime releases are listed [here](../reference/execution-providers/CUDA-ExecutionProvider.html#version-dependency).
-
-### MacOS / CPU
-
-1. The system must have libomp.dylib which can be installed using `brew install libomp`.
+### Windows builds
+Windows builds require [Visual C++ 2019 runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
 
 ## Install
+The following build variants are available as officially supported packages. Others can be built from source from each release branch: see [Build from source](../how-to/build.md)
 
-* Default CPU Provider (Eigen + MLAS)
+* Default CPU Provider
 * GPU Provider - NVIDIA CUDA
 * GPU Provider - DirectML (Windows)
-  * *On Windows, the [DirectML execution provider](https://github.com/microsoft/onnxruntime/tree/master/docs/execution_providers/DirectML-ExecutionProvider.md) is recommended for optimal performance and compatibility with a broad set of GPUs.*
+  * *On Windows, the [DirectML execution provider](../reference/execution-providers/DirectML-ExecutionProvider.md) is recommended for optimal performance and compatibility with a broad set of GPUs.*
 
 If using pip, run `pip install --upgrade pip` prior to downloading.
 
@@ -90,7 +62,3 @@ If using pip, run `pip install --upgrade pip` prior to downloading.
 
 Note: Dev builds created from the master branch are available for testing newer changes between official releases. Please use these at your own risk. We strongly advise against deploying these to production workloads as support is limited for dev builds.
 
-## Docker Images
-
-* [ONNX-Ecosystem](https://github.com/onnx/onnx-docker/tree/master/onnx-ecosystem): includes ONNX Runtime (CPU, Python), dependencies, tools to convert from various frameworks, and Jupyter notebooks to help get started
-* [Additional dockerfiles](https://github.com/microsoft/onnxruntime/tree/master/dockerfiles)

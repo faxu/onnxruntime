@@ -1,7 +1,7 @@
 ---
 parent: Tutorials
 toc: true
-nav_order: 1
+nav_exclude: true 
 ---
 
 # Samples catalog

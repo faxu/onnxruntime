@@ -1,6 +1,6 @@
 ---
 parent: Tutorials
-nav_order: 2
+nav_exclude: true 
 ---
 
 
