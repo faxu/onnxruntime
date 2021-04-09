@@ -493,6 +493,7 @@ a .abbr[data-original-title], a abbr[title]{
     background-color: #0F77D2;
     color: #fff;
     border: 0px solid #000;
+<<<<<<< HEAD
   }
 
   .r-wrap .r-content .r-option.unsupported span,
@@ -502,6 +503,17 @@ a .abbr[data-original-title], a abbr[title]{
     border: 2px solid #cc0000;
   }
 
+=======
+  }
+
+  .r-wrap .r-content .r-option.unsupported span,
+  .r-wrap .r-content .r-option.unsupported span:hover,
+  .r-wrap .r-content .r-option.unsupported span:focus,
+  .r-wrap .r-content .r-option.unsupported span:active{
+    border: 2px solid #cc0000;
+  }
+
+>>>>>>> upstream/gh-pages
   .r-wrap .r-content .r-option.gray span,
   .r-wrap .r-content .r-option.gray span:hover,
   .r-wrap .r-content .r-option.gray span:focus,
@@ -530,6 +542,7 @@ a .abbr[data-original-title], a abbr[title]{
   .r-wrap .r-content #command.r-option.valid span, .r-wrap .r-content #command.r-option.valid span:hover,
   .r-wrap .r-content #ot_command.r-option.valid span, .r-wrap .r-content #ot_command.r-option.valid span:hover {
 	background-color:green;
+<<<<<<< HEAD
   }
 
   .r-wrap .r-content #command.r-option.invalid span, .r-wrap .r-content #command.r-option.invalid span:hover,
@@ -537,6 +550,15 @@ a .abbr[data-original-title], a abbr[title]{
 	border: 2px solid #cc0000;
   }
 
+=======
+  }
+
+  .r-wrap .r-content #command.r-option.invalid span, .r-wrap .r-content #command.r-option.invalid span:hover,
+  .r-wrap .r-content #ot_command.r-option.invalid span, .r-wrap .r-content #ot_command.r-option.invalid span:hover {
+	border: 2px solid #cc0000;
+  }
+
+>>>>>>> upstream/gh-pages
   .r-wrap .r-content .r-option.command-container a.link:hover,
   .r-wrap .r-content .r-option.command-container a.link:focus,
   .r-wrap .r-content .r-option.command-container a.link:active {

@@ -1,7 +1,7 @@
 ---
-title: Add a new operator
+title: Use custom operators
 parent: How to
-nav_order: 2
+nav_order: 4
 ---
 
 # Add a new operator to ONNX Runtime

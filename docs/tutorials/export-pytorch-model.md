@@ -1,7 +1,7 @@
 ---
 title: Export PyTorch model
-parent: How to
-nav_order: 5
+parent: Tutorials
+nav_exclude: true 
 ---
 
 ## Export PyTorch model with custom ONNX operators
