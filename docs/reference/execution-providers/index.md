@@ -5,24 +5,32 @@ has_children: true
 nav_order: 2
 ---
 
-# Introduction
+# ONNX Runtime Execution Providers
 {: .no_toc }
 
-ONNX Runtime is capable of working with different HW acceleration libraries to execute the ONNX models on the hardware platform. ONNX Runtime supports an extensible framework, called **Execution Providers** (EP), to integrate with the HW specific libraries. This interface enables flexibility for the AP application developer to deploy their ONNX models in different environments in the cloud and the edge and optimize the execution by taking advantage of the compute capabilities of the platform.
+ONNX Runtime works with different hardware acceleration libraries through its extensible **Execution Providers** (EP) framework to optimally execute the ONNX models on the hardware platform. This interface enables flexibility for the AP application developer to deploy their ONNX models in different environments in the cloud and the edge and optimize the execution by taking advantage of the compute capabilities of the platform.
 
-<p align="center"><img width="50%" src="/images/ONNX_Runtime_EP1.png" alt="Executing ONNX models across different HW environments"/></p>
+<p align="center"><img width="50%" src="https://www.onnxruntime.ai/images/ONNX_Runtime_EP1.png" alt="Executing ONNX models across different HW environments"/></p>
 
 ONNX Runtime works with the execution provider(s) using the `GetCapability()` interface to allocate specific nodes or sub-graphs for execution by the EP library in supported hardware. The EP libraries that are pre-installed in the execution environment process and execute the ONNX sub-graph on the hardware. This architecture abstracts out the details of the hardware specific libraries that are essential to optimize the execution of deep neural networks across hardware platforms like CPU, GPU, FPGA or specialized NPUs.
 
-<p align="center"><img width="50%" src="/images/ONNX_Runtime_EP3.png" alt="ONNX Runtime GetCapability()"/></p>
+<p align="center"><img width="50%" src="https://www.onnxruntime.ai/images/ONNX_Runtime_EP3.png" alt="ONNX Runtime GetCapability()"/></p>
 
-ONNX Runtime supports many different execution providers today. Some of the EPs are in GA and used in live service. Many are in released in preview to enable developers to develop and customize their application using the different options.
+ONNX Runtime supports many different execution providers today. Some of the EPs are in production for live service, while others are released in preview to enable developers to develop and customize their application using the different options.
 
 ## Contents
 {: .no_toc }
 
 * TOC placeholder
 {:toc}
+
+### Summary of supported Execution Providers 
+|CPU|GPU|IoT/Edge/Mobile|Other|
+|---|---|---|---|
+|Default CPU - *MLAS (Microsoft Linear Algebra Subprograms) + Eigen*|NVIDIA CUDA|[Intel OpenVINO](../reference/execution-providers/OpenVINO-ExecutionProvider.md)||
+|[Intel DNNL](../reference/execution-providers/DNNL-ExecutionProvider.md)|[NVIDIA TensorRT](../reference/execution-providers/TensorRT-ExecutionProvider.md)|[ARM Compute Library](../reference/execution-providers/ACL-ExecutionProvider.md) (*preview*)|[Rockchip NPU](../reference/execution-providers/RKNPU-ExecutionProvider.md) (*preview*)|
+|[Intel nGraph](../reference/execution-providers/nGraph-ExecutionProvider.md)|[DirectML](../reference/execution-providers/DirectML-ExecutionProvider.md)|[Android Neural Networks API](../reference/execution-providers/NNAPI-ExecutionProvider.md) (*preview*)|[Xilinx Vitis-AI](../reference/execution-providers/Vitis-AI-ExecutionProvider.md) (*preview*)|
+||[AMD MIGraphX](../reference/execution-providers/MIGraphX-ExecutionProvider.md) (*preview*)|[ARM-NN](../reference/execution-providers/ArmNN-ExecutionProvider.md) (*preview*)|
 
 ### Add an Execution Provider
 

@@ -1,5 +1,4 @@
 ---
-parent: Tutorials
 nav_exclude: true 
 ---
 

@@ -1,7 +1,3 @@
----
-parent: Tutorials
-nav_exclude: true 
----
 
 # Character recognition with MNIST in Java
 {: .no_toc }
