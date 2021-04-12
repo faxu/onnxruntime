@@ -1,6 +1,5 @@
 ---
 title: Use the PyOp operator
-parent: How to
 nav_exclude: true
 ---
 

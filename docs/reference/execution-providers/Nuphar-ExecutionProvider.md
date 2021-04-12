@@ -1,11 +1,11 @@
 ---
-title: Nuphar
+title: NUPHAR
 parent: Execution Providers
 grand_parent: Reference
 nav_order: 10
 ---
 
-# Nuphar Execution Provider (preview)
+# Nuphar Execution Provider
 {: .no_toc }
 
 NUPHAR stands for Neural-network Unified Preprocessing Heterogeneous Architecture. As an execution provider in the ONNX Runtime, it is built on top of [TVM](https://github.com/dmlc/tvm) and [LLVM](https://llvm.org) to accelerate ONNX models by compiling nodes in subgraphs into optimized functions via JIT. It also provides JIT caching to save compilation time at runtime. 

@@ -8,9 +8,10 @@ nav_order: 3
 
 
 ## API Documentation
+
 |API|Supported Versions|Samples|
 |---|---|---|
-|[Python](https://aka.ms/onnxruntime-python)| 3.6, 3.7, 3.9) [Python Dev Notes](https://github.com/microsoft/onnxruntime/tree/master/docs/Python_Dev_Notes.md)| [Samples](https://github.com/microsoft/onnxruntime/tree/master/samples/#python)|
+|[Python](https://aka.ms/onnxruntime-python)| 3.6, 3.7, 3.8, 3.9) [Python Dev Notes](https://github.com/microsoft/onnxruntime/tree/master/docs/Python_Dev_Notes.md)| [Samples](https://github.com/microsoft/onnxruntime/tree/master/samples/#python)|
 |[C#](../reference/api/csharp-api.md)| | [Samples](https://github.com/microsoft/onnxruntime/tree/master/samples/#C)|
 |[C++](https://github.com/microsoft/onnxruntime/blob/master/include/onnxruntime/core/session/onnxruntime_cxx_api.h)| |[Samples](https://github.com/microsoft/onnxruntime/tree/master/samples/#CC)|
 |[C](../reference/api/c-api.md)| | [Samples](https://github.com/microsoft/onnxruntime/tree/master/samples/#CC)|
@@ -30,33 +31,14 @@ nav_order: 3
 |Default CPU - *MLAS (Microsoft Linear Algebra Subprograms) + Eigen*|NVIDIA CUDA|[Intel OpenVINO](../reference/execution-providers/OpenVINO-ExecutionProvider.md)||
 |[Intel DNNL](../reference/execution-providers/DNNL-ExecutionProvider.md)|[NVIDIA TensorRT](../reference/execution-providers/TensorRT-ExecutionProvider.md)|[ARM Compute Library](../reference/execution-providers/ACL-ExecutionProvider.md) (*preview*)|[Rockchip NPU](../reference/execution-providers/RKNPU-ExecutionProvider.md) (*preview*)|
 |[Intel nGraph](../reference/execution-providers/nGraph-ExecutionProvider.md)|[DirectML](../reference/execution-providers/DirectML-ExecutionProvider.md)|[Android Neural Networks API](../reference/execution-providers/NNAPI-ExecutionProvider.md) (*preview*)|[Xilinx Vitis-AI](../reference/execution-providers/Vitis-AI-ExecutionProvider.md) (*preview*)|
-|Intel MKL-ML *(build option)*|[AMD MIGraphX](../reference/execution-providers/MIGraphX-ExecutionProvider.md) (*preview)|[ARM-NN](../reference/execution-providers/ArmNN-ExecutionProvider.md) (*preview*)|
+||[AMD MIGraphX](../reference/execution-providers/MIGraphX-ExecutionProvider.md) (*preview*)|[ARM-NN](../reference/execution-providers/ArmNN-ExecutionProvider.md) (*preview*)|
 
 
 ## Deploying ONNX Runtime
-
-### Cloud
-
-* ONNX Runtime can be deployed to any cloud for model inference, including [Azure Machine Learning Services](https://azure.microsoft.com/en-us/services/machine-learning-service).
-  * [Create and accelerate ML models](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-build-deploy-onnx)
-  * [AzureML sample notebooks](https://github.com/Azure/MachineLearningNotebooks/tree/master/how-to-use-azureml/deployment/onnx)
-
-
-### IoT and edge devices
-
-* [Reference implementations](https://github.com/Azure-Samples/onnxruntime-iot-edge)
-
-The expanding focus and selection of IoT devices with sensors and consistent signal streams introduces new opportunities to move AI workloads to the edge.
-This is particularly important when there are massive volumes of incoming data/signals that may not be efficient or useful to push to the cloud due to storage or latency considerations. Consider: surveillance tapes where 99% of footage is uneventful, or real-time person detection scenarios where immediate action is required. In these scenarios, directly executing model inference on the target device is crucial for optimal assistance.
-
-### Client applications
-
-* Install or build the package you need to use in your application. ([sample implementations](https://github.com/microsoft/onnxruntime/tree/master/samples/c_cxx) using the C++ API)
-
-* On newer Windows 10 devices (1809+), ONNX Runtime is available by default as part of the OS and is accessible via the [Windows Machine Learning APIs](https://docs.microsoft.com/en-us/windows/ai/windows-ml/). ([Tutorials for Windows Desktop or UWP app](https://docs.microsoft.com/en-us/windows/ai/windows-ml/get-started-desktop))
+ONNX Runtime is cross-platform can be deployed to cloud, client, mobile, and Edge/IoT solutions. See the [Tutorials section](../tutorials) for examples.
 
 ## Build from Source
 
-For production scenarios, it's strongly recommended to build only from an [official release branch](https://github.com/microsoft/onnxruntime/releases).
+For production scenarios, it's strongly recommended to build only from an [official release branch](https://github.com/microsoft/onnxruntime/releases). 
 
-* [Instructions for additional build flavors](../how-to/build.md)
+See [Build from source](../how-to/build.md) for detailed instructions.

@@ -11,14 +11,11 @@ New in the ONNX Runtime Nuget package is the ability to use the full [WinML API]
 
 This allows scenarios such as passing a [Windows.Media.VideoFrame](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.VideoFrame) from your connected camera directly into the runtime for realtime inference.
 
-The WinML API is a WinRT API that shipped inside the Windows OS starting with build 1809 (RS5) in the Windows.AI.MachineLearning namespace.   It embedded a version of the ONNX Runtime.
+The WinML API is a WinRT API that shipped inside the Windows OS starting with build 1809 (RS5) in the Windows.AI.MachineLearning namespace.  It embedded a version of the ONNX Runtime.
 
 Many customers have asked for a way to use this offering as an application redistributable package.
 
 With our [layered architecture](../../resources/high-level-design.md#the-onnx-runtime-and-windows-os-integration) you can now do this, with some limitations. The WinML APIs have been lifted and mirrored into the Microsoft.AI.MachineLearning namespace in the redistributable.
-
-## Contents
-{: .no_toc }
 
 ## NuGet Package
 

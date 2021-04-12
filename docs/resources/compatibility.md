@@ -6,13 +6,11 @@ nav_order: 1
 ---
 
 # ONNX Runtime compatibility
-{:toc }
+* TOC placeholder
+{:toc}
 
 ## Backwards compatibility
-* All versions of ONNX Runtime support ONNX opsets from ONNX v1.2.1+ (opset version 7 and higher). 
-  * For example: if an ONNX Runtime release implements ONNX opset 9, it can run models stamped with ONNX opset versions in the range [7-9]. 
-
-* Newer versions of ONNX Runtime support all models that worked with prior versions, so updates should not break integrations.
+Newer versions of ONNX Runtime support all models that worked with prior versions, so updates should not break integrations.
 
 ## Environment compatibility
 ONNX Runtime is not explicitly tested with every variation/combination of environments and dependencies, so this list is not comprehensive. Please use this as starting reference. For specific questions or requests, please [file an issue](https://github.com/microsoft/onnxruntime/issues) on Github.
@@ -60,26 +58,29 @@ ONNX Runtime is not explicitly tested with every variation/combination of enviro
 
 
 ## ONNX opset support
-ONNX Runtime supports all opsets from the latest released version of the [ONNX](https://onnx.ai) spec. To convert/export an ONNX model, see [onnx/tutorials](https://github.com/onnx/tutorials#getting-onnx-models).
+ONNX Runtime supports all opsets from the latest released version of the [ONNX](https://onnx.ai) spec. All versions of ONNX Runtime support ONNX opsets from ONNX v1.2.1+ (opset version 7 and higher). 
+  * For example: if an ONNX Runtime release implements ONNX opset 9, it can run models stamped with ONNX opset versions in the range [7-9]. 
+
+
 
 * [Supported Operator Data Types](https://github.com/microsoft/onnxruntime/blob/master/docs/OperatorKernels.md)
   * *Operators not supported in the current ONNX spec may be available as a [Contrib Operator](https://github.com/microsoft/onnxruntime/blob/master/docs/ContribOperators.md)*
   * [How to add a custom operator/kernel](../how-to/add-custom-op.md)
 
-| ONNX Runtime release version | [ONNX release version](https://github.com/onnx/onnx/blob/master/docs/Versioning.md) | ONNX opset version | ONNX ML opset version | Supported ONNX IR version | [Windows ML Availability](https://docs.microsoft.com/en-us/windows/ai/windows-ml/release-notes/)|
+| ONNX Runtime version | [ONNX version](https://github.com/onnx/onnx/blob/master/docs/Versioning.md) | ONNX opset version | ONNX ML opset version | ONNX IR version | [Windows ML Availability](https://docs.microsoft.com/en-us/windows/ai/windows-ml/release-notes/)|
 |------------------------------|--------------------|--------------------|----------------------|------------------|------------------|
-| 1.7.2<br/>1.7.1<br/>1.7.0 | **1.8** down to 1.2 | 13 | 2 | 7 | Windows AI 1.7+ |
-| 1.6.0 | **1.8** down to 1.2 | 13 | 2 | 7 | Windows AI 1.6+ |
-| 1.5.3<br/>1.5.2<br/>1.5.1 | **1.7** down to 1.2 | 12 | 2 | 7 | Windows AI 1.5+ |
-| 1.4.0 | **1.7** down to 1.2 | 12 | 2 | 7 | Windows AI 1.4+ |
-| 1.3.1<br/>1.3.0 | **1.7** down to 1.2 | 12 | 2 | 7 | Windows AI 1.3+ |
-| 1.2.0<br/>1.1.2<br/>1.1.1<br/>1.1.0 | **1.6** down to 1.2 | 11 | 2 | 6 | Windows AI 1.3+ |
-| 1.0.0 | **1.6** down to 1.2 | 11 | 2 | 6 | Windows AI 1.3+ |
-| 0.5.0 | **1.5** down to 1.2 | 10 | 1 | 5 | Windows AI 1.3+ |
-| 0.4.0 | **1.5** down to 1.2 | 10 | 1 | 5 | Windows AI 1.3+ |
-| 0.3.1<br/>0.3.0 | **1.4** down to 1.2 | 9 | 1 | 3 | Windows 10 2004+ |
-| 0.2.1<br/>0.2.0 | **1.3** down to 1.2 | 8 | 1 | 3 | Windows 10 1903+ |
-| 0.1.5<br/>0.1.4 | **1.3** down to 1.2 | 8 | 1 | 3 | Windows 10 1809+ |
+| 1.7.2<br/>1.7.1<br/>1.7.0 | **1.8** | 13 | 2 | 7 | Windows AI 1.7+ |
+| 1.6.0 | **1.8** | 13 | 2 | 7 | Windows AI 1.6+ |
+| 1.5.3<br/>1.5.2<br/>1.5.1 | **1.7** | 12 | 2 | 7 | Windows AI 1.5+ |
+| 1.4.0 | **1.7** | 12 | 2 | 7 | Windows AI 1.4+ |
+| 1.3.1<br/>1.3.0 | **1.7** | 12 | 2 | 7 | Windows AI 1.3+ |
+| 1.2.0<br/>1.1.2<br/>1.1.1<br/>1.1.0 | **1.6** | 11 | 2 | 6 | Windows AI 1.3+ |
+| 1.0.0 | **1.6** | 11 | 2 | 6 | Windows AI 1.3+ |
+| 0.5.0 | **1.5** | 10 | 1 | 5 | Windows AI 1.3+ |
+| 0.4.0 | **1.5** | 10 | 1 | 5 | Windows AI 1.3+ |
+| 0.3.1<br/>0.3.0 | **1.4** | 9 | 1 | 3 | Windows 10 2004+ |
+| 0.2.1<br/>0.2.0 | **1.3** | 8 | 1 | 3 | Windows 10 1903+ |
+| 0.1.5<br/>0.1.4 | **1.3** | 8 | 1 | 3 | Windows 10 1809+ |
 
 Unless otherwise noted, please use the latest released version of the tools to convert/export the ONNX model. Most tools are backwards compatible and support multiple ONNX versions. Join this with the table above to evaluate ONNX Runtime compatibility.
 
