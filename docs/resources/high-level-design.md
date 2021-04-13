@@ -1,5 +1,5 @@
 ---
-title: Technical Design
+title: Technical design
 parent: Resources
 nav_order: 2
 ---
@@ -50,7 +50,7 @@ provider using the GetCapability() API.
 ![ONNXRuntime high level system architecture](https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/228d22d3-6e3e-48b1-811c-1d48353f031c.png)
 
 ### More about partitioning
-
+{: .no_toc }
 ONNXRuntime partitions a model graph into subgraphs based on the available execution providers, one for each distinct provider. ONNXRuntime provides
 a default execution provider that is used as the fallback execution for the
 operators that cannot be pushed onto the more specialized but more efficient
@@ -101,18 +101,18 @@ transform](https://github.com/microsoft/onnxruntime/tree/master/include//onnxrun
 
 ## The ONNX Runtime and Windows OS integration
 
-The ONNX runtime shipped with the Windows operating system in build 1809 (RS5).  The runtime was embedded inside the Windows.AI.MachineLearning.dll and was exposed via that WinRT API (WinML for short).  It includes CPU support and a DirectML execution provider for GPU support.   Since then it has continued to ship in every version of Windows.
+The ONNX runtime shipped with the Windows operating system in build 1809 (RS5). The runtime was embedded inside the Windows.AI.MachineLearning.dll and was exposed via that WinRT API (WinML for short). It includes CPU support and a DirectML execution provider for GPU support.  Since then it has continued to ship in every version of Windows.
 
 Starting with the ONNX Runtime 1.2 release we are bringing a new layered architecture to the ONNX Runtime and Windows ML.
-*Note:  This feature is preview as of the 1.2 release*
 
 The high level design looks like this
 
-![ONNX + WinML layered architecture](/images/layered-architecture.png)
+![ONNX + WinML layered architecture](../../images/layered-architecture.png)
 
-You can see we replaced the embedded ONNX runtime with the new ONNXRuntime.dll.  With this new approach customers have flexibility on which API they choose to use and on how they want to distribute the binaries.
+You can see we replaced the embedded ONNX runtime with the new ONNXRuntime.dll. With this new approach customers have flexibility on which API they choose to use and on how they want to distribute the binaries.
 
 ### API choice
+{: .no_toc }
 
 Developers can now choose which API works best for their scenario.
 
@@ -123,6 +123,7 @@ Developers can now choose which API works best for their scenario.
 |Tensorization| Accepts VideoFrames and converts to tensors (support for CPU and GPU)| Accepts tensors|
 
 ### Distribution choice
+{: .no_toc }
 
 You can also choose to use runtimes included in the Windows OS, or use the redist nuget to ship the runtime with the app.
 
@@ -135,6 +136,7 @@ You can also choose to use runtimes included in the Windows OS, or use the redis
 |Opset| Refreshed in OS updates| App chooses|
 
 ### Using the NuGet WinRT API with other C-API distributions
+{: .no_toc }
 
 The WinRT API NuGet is distributed with a curated build of the OnnxRuntime engine. App developers may wish to use the WinRT API, but find themselves limited to the functionality provided by the curated OnnxRuntime engine distributed as part of the WinRT API NuGet package. This can happen because the OnnxRuntime engine shipped with the WinRT API NuGet package only contains the CPU and DML execution providers.
 

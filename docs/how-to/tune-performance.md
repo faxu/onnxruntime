@@ -7,7 +7,7 @@ nav_order: 3
 # ONNX Runtime Performance Tuning
 {: .no_toc }
 
-ONNX Runtime gives high performance across a range of hardware options by providing "Execution Providers" to interface to different execution environments. See: [design overview](../resources/high-level-design.md), [supported execution providers](../reference/execution-providers).
+ONNX Runtime provides high performance across a range of hardware options through its [Execution Providers interface](../reference/execution-providers) for different execution environments.
 
 Along with this flexibility comes decisions for tuning and usage. For each model running with each execution provider, there are settings that can be tuned (e.g. thread number, wait policy, etc) to improve performance.
 
@@ -46,6 +46,9 @@ In both cases, you will get a JSON file which contains the detailed performance 
 * Type chrome://tracing in the address bar
 * Load the generated JSON file
 
+### Using and configuring shared arena based allocator to reduce memory consumption between multiple sessions
+See `Share allocator(s) between sessions` section in [C API documentation](../reference/api/c-api).
+
 ## Using different Execution Providers
 
 To learn more about different Execution Providers, see [docs/exeuction_providers](../reference/execution-providers).
@@ -62,7 +65,7 @@ For example:
 
 ### C and C# API
 
-Official release (nuget package) supports default (MLAS) and MKL-ML for CPU, and CUDA for GPU. For other execution providers, you need to build from source. Append `--build_csharp` to the instructions to build both C# and C packages.
+Official release (nuget package) supports default (MLAS) for CPU, and CUDA for GPU. For other execution providers, you need to build from source. Append `--build_csharp` to the instructions to build both C# and C packages.
 
 For example:
 
@@ -110,17 +113,17 @@ session.set_providers(['CUDAExecutionProvider'])
 Performance is dependent on the specific model you're trying to run, the session and run options you've selected, and of course, your specific hardware target. Below you'll find some more information that may be helpful to select the right Execution Provider.
 
 ### CUDA (Default GPU) or CPU?
-
+{: .no_toc }
 The CPU version of ONNX Runtime provides a complete implementation of all operators in the ONNX spec. This ensures that your ONNX-compliant model can execute successfully. In order to keep the binary size small, common data types are supported for the ops. If you are using an uncommon data type that is not supported, you can file an issue and/or contribute a PR (see examples - [PR #2112](https://github.com/microsoft/onnxruntime/pull/2112), [PR #2034](https://github.com/microsoft/onnxruntime/pull/2034), [PR #1565](https://github.com/microsoft/onnxruntime/pull/1565)). Please make sure you provide details on usage justification.
 
 Additionally, not all CUDA kernels are implemented, as these have been prioritized on an as-needed basis. This means that if your model contains operators that do not have a CUDA implementation, it will fall back to CPU. Switching between CPU and GPU can cause significant performance impact. If you require a specific operator that is not currently supported, please consider [contributing](https://github.com/microsoft/onnxruntime/tree/master/CONTRIBUTING.md) and/or [file an issue](https://github.com/microsoft/onnxruntime/issues) clearly describing your use case and share your model if possible.
 
 ### TensorRT or CUDA?
-
+{: .no_toc }
 TensorRT and CUDA are separate execution providers for ONNX Runtime. On the same hardware, TensorRT will generally provide better performance; however, this depends on the specific model and whether the operators in the model can be supported by TensorRT. In cases where TensorRT cannot handle the subgraph(s), it will fall back to CUDA. Note that the TensorRT EP may depend on a different version of CUDA than the CUDA EP.
 
 ### TensorRT/CUDA or DirectML? 
-
+{: .no_toc }
 DirectML is the hardware-accelerated DirectX 12 library for machine learning on Windows and supports all DirectX 12 capable devices (Nvidia, Intel, AMD). This means that if you are targeting Windows GPUs, using the DirectML Execution Provider is likely your best bet. This can be used with both the ONNX Runtime as well as [WinML APIs](../reference/api/winrt-api.md).
 
 ## Tuning performance for specific Execution Providers
@@ -157,9 +160,9 @@ number of threads used to parallelize the execution of the graph (across nodes).
 
 * sess_options.graph_optimization_level = rt.GraphOptimizationLevel.ORT_ENABLE_ALL. Default is already ORT_ENABLE_ALL(99). Please see [onnxruntime_c_api.h](https://github.com/microsoft/onnxruntime/tree/master/include/onnxruntime/core/session/onnxruntime_c_api.h#L241)  (enum GraphOptimizationLevel) for the full list of all optimization levels. For details regarding available optimizations and usage please refer to the [Graph Optimizations Doc](../resources/graph-optimizations.md).
 
-### MKL_DNN/nGraph/MKL_ML Execution Provider
+### MKL_DNN/nGraph Execution Provider
 
-MKL_DNN, MKL_ML and nGraph all depends on openmp for parallelization. For those execution providers, we need to use the openmp environment variable to tune the performance.
+MKL_DNN and nGraph depend on openmp for parallelization. For those execution providers, we need to use the openmp environment variable to tune the performance.
 
 The most widely used environment variables are:
 
@@ -176,8 +179,7 @@ The most widely used environment variables are:
 
 The answers below are troubleshooting suggestions based on common previous user-filed issues and questions. This list is by no means exhaustive and there is a lot of case-by-case fluctuation depending on the model and specific usage scenario. Please use this information to guide your troubleshooting, search through previously filed issues for related topics, and/or file a new issue if your problem is still not resolved.
 
-## Using and configuring shared arena based allocator to reduce memory consumption between multiple sessions
-See `Share allocator(s) between sessions` section in [C API documentation](../reference/api/c-api).
+
 
 ### Performance Troubleshooting Checklist
 

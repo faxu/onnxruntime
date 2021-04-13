@@ -6,7 +6,7 @@ nav_order: 2
 
 # ONNX Runtime Tutorials
 {: .no_toc }
-The following tutorials demonstate some popular use cases of ONNX Runtime. For language-specific API examples, please see [API docs](./reference/api).
+The following tutorials demonstate some common use cases of ONNX Runtime.
 
 Additional task-focused instructions can be found under [How to](./how-to). 
 

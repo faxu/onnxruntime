@@ -8,14 +8,13 @@ nav_order: 1
 {: .no_toc }
 For production deployments, it's strongly recommended to build only from an [official release branch](https://github.com/microsoft/onnxruntime/releases). 
 
-
 ## Contents
 {: .no_toc }
 
 * TOC placeholder
 {:toc}
 
-## Inference
+## Inferencing
 
 ### CPU
 

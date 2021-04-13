@@ -1,6 +1,5 @@
 ---
 title: Export PyTorch model
-parent: Tutorials
 nav_exclude: true 
 ---
 

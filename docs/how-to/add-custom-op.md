@@ -15,7 +15,7 @@ ONNX Runtime provides options to include custom operators that are not official 
 A new op can be registered with ONNX Runtime using the Custom Operator API or RegisterCustomRegistry API.
 
 ### [Recommended] Custom Operator API
-
+{: .no_toc }
 Use the custom operator C/C++ API (onnxruntime_c_api.h)
 
 1. Create an OrtCustomOpDomain with the domain name used by the custom ops
@@ -38,7 +38,7 @@ When a model being inferred on GPU, onnxruntime will insert MemcpyToHost op befo
 When using CUDA custom ops, to ensure synchronization between ORT's CUDA kernels and the custom CUDA kernels, they must all use the same CUDA compute stream. To ensure this, you may first create a CUDA stream and pass it to the underlying Session via SessionOptions (use `OrtCudaProviderOptions` struct). This will ensure ORT's CUDA kernels use that stream and if the custom CUDA kernels are launched using the same stream, synchronization is now taken care of implicitly. For a sample, please see how the afore-mentioned `MyCustomOp` is being launched and how the Session using this custom op is created.
 
 ### [Alternate] Use RegisterCustomRegistry API
-
+{: .no_toc }
 1. Implement your kernel and schema (if required) using the OpKernel and OpSchema APIs (headers are in the include folder).
 2. Create a CustomRegistry object and register your kernel and schema with this registry.
 3. Register the custom registry with ONNXRuntime using RegisterCustomRegistry API.
