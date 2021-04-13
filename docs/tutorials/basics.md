@@ -4,6 +4,8 @@ parent: Tutorials
 nav_order: 1
 ---
 # Tutorials: Basics
+{: .no_toc }
+
 These tutorials demonstrate basic inferencing with ONNX Runtime with each language API. 
 
 

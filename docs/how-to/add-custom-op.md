@@ -4,6 +4,8 @@ parent: How to
 nav_order: 5
 ---
 # Custom operators
+{: .no_toc }
+
 ONNX Runtime provides options to include custom operators that are not official ONNX operators. The [contrib ops domain](https://github.com/microsoft/onnxruntime/blob/master/onnxruntime/contrib_ops) contains some common non-official ops, however it's not recommended to add operators here to avoid increasing binary size of the core runtime package.
 ## Contents
 {: .no_toc }
