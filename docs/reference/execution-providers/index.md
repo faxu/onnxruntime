@@ -25,8 +25,9 @@ ONNX Runtime supports many different execution providers today. Some of the EPs 
 {:toc}
 
 ### Summary of supported Execution Providers 
+
 |CPU|GPU|IoT/Edge/Mobile|Other|
-|---|---|---|---|
+---|---|---|---
 |Default CPU - *MLAS (Microsoft Linear Algebra Subprograms) + Eigen*|NVIDIA CUDA|[Intel OpenVINO](../reference/execution-providers/OpenVINO-ExecutionProvider.md)||
 |[Intel DNNL](../reference/execution-providers/DNNL-ExecutionProvider.md)|[NVIDIA TensorRT](../reference/execution-providers/TensorRT-ExecutionProvider.md)|[ARM Compute Library](../reference/execution-providers/ACL-ExecutionProvider.md) (*preview*)|[Rockchip NPU](../reference/execution-providers/RKNPU-ExecutionProvider.md) (*preview*)|
 |[Intel nGraph](../reference/execution-providers/nGraph-ExecutionProvider.md)|[DirectML](../reference/execution-providers/DirectML-ExecutionProvider.md)|[Android Neural Networks API](../reference/execution-providers/NNAPI-ExecutionProvider.md) (*preview*)|[Xilinx Vitis-AI](../reference/execution-providers/Vitis-AI-ExecutionProvider.md) (*preview*)|

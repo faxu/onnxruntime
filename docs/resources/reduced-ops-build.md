@@ -1,10 +1,10 @@
 ---
-title: Reduced Operator build
+title: Reduced Operators build
 parent: Resources
 nav_order: 4
 ---
 
-# Reduced Operator Kernel build
+# Reduced Operators build
 
 To reduce the compiled binary size of ONNX Runtime (ORT), the operator kernels included in the build can be reduced to just the kernels required by your model/s.
 

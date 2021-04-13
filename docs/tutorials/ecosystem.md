@@ -9,6 +9,8 @@ nav_order: 4
 ONNX Runtime functions as part of an ecosystem of tools and platforms to deliver an end-to-end machine learning experience. Below is a list of popular tools and corresponding tutorials that work with and/or integrate ONNX Runtime.
 
 ## Contents
+{: .no_toc }
+
 * TOC placeholder
 {:toc}
 

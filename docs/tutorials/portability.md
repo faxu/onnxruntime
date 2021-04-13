@@ -6,6 +6,7 @@ nav_order: 3
 ---
 
 # Tutorials: Portability
+ONNX Runtime's compatibility with different model frameworks, development environments, and hardware accelerators provides a unified  solution for diverse use cases. Below are a few common examples of how ONNX Runtime can be used and deployed.
 
 ## General
 * *[COMING SOON]* Deploy a Python-trained model in a C# environment

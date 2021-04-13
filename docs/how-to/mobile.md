@@ -7,13 +7,13 @@ toc: true
 ---
 
 # Build for mobile
+{: .no_toc }
 
 * TOC placeholder
 {:toc}
 
 ## Overview
-
-<img width=40% src="../../images/mobile.png" alt="Steps to build for mobile platforms."/>
+![Steps to build for mobile platforms](../../images/mobile.png)
 
 ONNX Runtime now supports an internal model format to minimize the build size for usage in mobile and embedded scenarios. An ONNX model can be converted to an internal ONNX Runtime format ('ORT format model') using the below instructions.
 
