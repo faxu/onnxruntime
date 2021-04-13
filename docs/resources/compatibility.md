@@ -6,6 +6,11 @@ nav_order: 1
 ---
 
 # ONNX Runtime compatibility
+{: .no_toc }
+
+## Contents
+{: .no_toc }
+
 * TOC placeholder
 {:toc}
 

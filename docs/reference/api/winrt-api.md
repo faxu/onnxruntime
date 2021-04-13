@@ -6,6 +6,8 @@ nav_order: 6
 ---
 
 # Windows Machine Learning WinRT API
+{: .no_toc }
+
 The ONNX Runtime Nuget package provides the ability to use the full [WinML API](https://docs.microsoft.com/en-us/windows/ai/windows-ml/api-reference).
 This allows scenarios such as passing a [Windows.Media.VideoFrame](https://docs.microsoft.com/en-us/uwp/api/Windows.Media.VideoFrame) from your connected camera directly into the runtime for realtime inference.
 
@@ -23,8 +25,8 @@ In addition to using the in-box version of WinML, WinML can also be installed as
 Windows 8.1+
 
 ## Builds
-| Artifact      | Description | Supported Platforms |
-|-----------    |-------------|---------------------|
+| Artifact| Description | Supported Platforms |
+-----------|-------------|---------------------
 |[Microsoft.AI.MachineLearning](https://www.nuget.org/packages/Microsoft.AI.MachineLearning)|WinRT - CPU, GPU (DirectML)|Windows 8.1+|
 
 

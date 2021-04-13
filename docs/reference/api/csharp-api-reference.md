@@ -1,6 +1,3 @@
----
-title: C# API Reference
----
 
 # C# API Reference
 

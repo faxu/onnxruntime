@@ -9,7 +9,7 @@ nav_order: 3
 
 **How it works**: using the ORTModule class wrapper, ONNX Runtime for PyTorch runs the forward and backward passes of the training script using an optimized automatically-exported ONNX computation graph. ORT Training uses the same graph optimizations as ORT Inferencing, allowing for model training acceleration. 
 
-  * **[ONNX Runtime pre-training sample for BERT-Large](https://github.com/microsoft/onnxruntime-training-examples)**
+  * [ONNX Runtime pre-training sample for BERT-Large](https://github.com/microsoft/onnxruntime-training-examples)
 
 ## Train PyTorch model with ONNX Runtime
 

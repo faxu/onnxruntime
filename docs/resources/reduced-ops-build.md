@@ -5,8 +5,18 @@ nav_order: 4
 ---
 
 # Reduced Operators build
+{: .no_toc }
 
 To reduce the compiled binary size of ONNX Runtime (ORT), the operator kernels included in the build can be reduced to just the kernels required by your model/s.
+
+## Contents
+{: .no_toc }
+
+* TOC placeholder
+{:toc}
+
+
+## Feature Summary
 
 A configuration file must be created with details of the kernels that are required.
 

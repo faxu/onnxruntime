@@ -6,7 +6,7 @@ nav_order: 2
 
 # ONNX Runtime Tutorials
 {: .no_toc }
-The following tutorials demonstate some common use cases of ONNX Runtime.
+The following tutorials demonstrate some common use cases of ONNX Runtime.
 
 Additional task-focused instructions can be found under [How to](./how-to). 
 

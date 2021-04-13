@@ -4,6 +4,8 @@ parent: How to
 nav_order: 4
 ---
 # Quantize ONNX Models
+{: .no_toc }
+
 ## Contents
 {: .no_toc }
 
