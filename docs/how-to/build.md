@@ -312,9 +312,9 @@ These instructions are for JetPack SDK 4.4.
 
 ---
 
-#### DNNL and MKLML
+#### DNNL
 
-See more information on DNNL and MKL-ML [here](../reference/execution-providers/DNNL-ExecutionProvider.md).
+See more information on DNNL [here](../reference/execution-providers/DNNL-ExecutionProvider.md).
 
 ##### Build Instructions
 

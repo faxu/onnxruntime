@@ -17,15 +17,17 @@ nav_order: 6
 * TOC placeholder
 {:toc}
 
-## Minimum requirements
+## Requirements
 
 The NNAPI EP requires Android devices with Android 8.1 or higher, it is recommended to use Android devices with Android 9 or higher to achieve optimal performance.
 
-## Build NNAPI EP
+## Build
 
 For build instructions, please see the [BUILD page](../../how-to/build.md#Android-NNAPI-Execution-Provider).
 
-## Using NNAPI EP in C/C++
+## Usage
+### C/C++
+{: .no_toc}
 
 ```c++
 Ort::Env env = Ort::Env{ORT_LOGGING_LEVEL_ERROR, "Default"};
@@ -37,7 +39,7 @@ Ort::Session session(env, model_path, sf);
 
 The C API details are [here](../api/c-api.md).
 
-## Configuring NNAPI Execution Provider run time options
+## Configuration Options
 
 There are several run time options for NNAPI Execution Provider.
 

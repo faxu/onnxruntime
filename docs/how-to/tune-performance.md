@@ -46,26 +46,25 @@ In both cases, you will get a JSON file which contains the detailed performance 
 * Type chrome://tracing in the address bar
 * Load the generated JSON file
 
-### Using and configuring shared arena based allocator to reduce memory consumption between multiple sessions
-See `Share allocator(s) between sessions` section in [C API documentation](../reference/api/c-api).
-
 ## Using different Execution Providers
 
 To learn more about different Execution Providers, see [docs/exeuction_providers](../reference/execution-providers).
 
-### Python API
+### Build the EP
 
-Official Python packages on Pypi only support the default CPU (MLAS) and default GPU (CUDA) execution providers. For other execution providers, you need to build from source. Please refer to the [build instructions](../how-to/build.md). The recommended instructions build the wheel with debug info in parallel.
+**Python**
+
+Official Python packages on Pypi only support the default CPU (MLAS) and default GPU (CUDA) execution providers. For other execution providers, you need to [build from source](../how-to/build.md). The recommended instructions build the wheel with debug info in parallel.
 
 For example:
 
 `DNNL:		 ./build.sh --config RelWithDebInfo --use_dnnl --build_wheel --parallel`
 
-` CUDA:	     ./build.sh --config RelWithDebInfo --use_cuda  --build_wheel --parallel`
+`CUDA:	     ./build.sh --config RelWithDebInfo --use_cuda  --build_wheel --parallel`
 
-### C and C# API
+**C and C#**
 
-Official release (nuget package) supports default (MLAS) for CPU, and CUDA for GPU. For other execution providers, you need to build from source. Append `--build_csharp` to the instructions to build both C# and C packages.
+Official releases on Nuget support default (MLAS) for CPU, and CUDA for GPU. For other execution providers, you need to build from source. Append `--build_csharp` to the instructions to build both C# and C packages.
 
 For example:
 
@@ -73,7 +72,10 @@ For example:
 
 `CUDA:	     ./build.sh --config RelWithDebInfo --use_cuda  --build_csharp --parallel`
 
-In order to use DNNL, nGraph, CUDA, or TensorRT execution provider, you need to call the C API OrtSessionOptionsAppendExecutionProvider. Here is an example for the CUDA execution provider:
+
+### Register the EP
+
+In order to use DNNL, CUDA, or TensorRT execution provider, you need to call the C API OrtSessionOptionsAppendExecutionProvider.
 
 C API Example:
 
@@ -126,7 +128,11 @@ TensorRT and CUDA are separate execution providers for ONNX Runtime. On the same
 {: .no_toc }
 DirectML is the hardware-accelerated DirectX 12 library for machine learning on Windows and supports all DirectX 12 capable devices (Nvidia, Intel, AMD). This means that if you are targeting Windows GPUs, using the DirectML Execution Provider is likely your best bet. This can be used with both the ONNX Runtime as well as [WinML APIs](../reference/api/winrt-api.md).
 
-## Tuning performance for specific Execution Providers
+## Tuning performance
+Below are some suggestions for things to try for various EPs for tuning performance. 
+
+### Shared arena based allocator
+Memory consumption can be reduced between multiple sessions by configuring the shared arena based allocation. See the `Share allocator(s) between sessions` section in the [C API documentation](../reference/api/c-api).
 
 ### Thread management
 
@@ -175,10 +181,9 @@ The most widely used environment variables are:
   * ACTIVE will not yield CPU, instead it will have a while loop to check whether the next task is ready
   * Use PASSIVE if your CPU usage already high, and use ACTIVE when you want to trade CPU with latency
 
-## Troubleshooting model performance issues
+## Troubleshooting performance issues
 
 The answers below are troubleshooting suggestions based on common previous user-filed issues and questions. This list is by no means exhaustive and there is a lot of case-by-case fluctuation depending on the model and specific usage scenario. Please use this information to guide your troubleshooting, search through previously filed issues for related topics, and/or file a new issue if your problem is still not resolved.
-
 
 
 ### Performance Troubleshooting Checklist

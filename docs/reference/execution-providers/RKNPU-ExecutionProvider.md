@@ -5,7 +5,9 @@ grand_parent: Reference
 nav_order: 11
 ---
 
-# RKNPU Execution Provider (preview)
+# RKNPU Execution Provider
+*PREVIEW*
+
 RKNPU DDK is an advanced interface to access Rockchip NPU. RKNPU Execution Provider enables deep learning inference on Rockchip NPU via RKNPU DDK.
 
 ## Contents
@@ -15,18 +17,12 @@ RKNPU DDK is an advanced interface to access Rockchip NPU. RKNPU Execution Provi
 {:toc}
 
 
-## Supported platforms
-
-* RK1808 Linux
-
-*Note: RK3399Pro platform is not supported.*
-
-
 ## Build 
 For build instructions, please see the [BUILD page](../../how-to/build.md#RKNPU).
 
 ## Usage
-### C/C++
+**C/C++**
+
 To use RKNPU as execution provider for inferencing, please register it as below.
 ```
 Ort::Env env = Ort::Env{ORT_LOGGING_LEVEL_ERROR, "Default"};
@@ -37,7 +33,12 @@ Ort::Session session(env, model_path, sf);
 The C API details are [here](../api/c-api.md).
 
 
-## Supported Operators
+## Support Coverage
+### Supported Platform
+* RK1808 Linux
+
+*Note: RK3399Pro platform is not supported.*
+### Supported Operators
 
 The table below shows the ONNX Ops supported using RKNPU Execution Provider and the mapping between ONNX Ops and RKNPU Ops.
 
@@ -68,17 +69,17 @@ The table below shows the ONNX Ops supported using RKNPU Execution Provider and 
 | Clip | CLIP |
 
 
-## Supported Models
+### Supported Models
 
 Below Models are supported from ONNX open model zoo using RKNPU Execution Provider
 
-### Image Classification
+**Image Classification**
 - squeezenet
 - mobilenetv2-1.0
 - resnet50v1
 - resnet50v2
 - inception_v2
 
-### Object Detection
+**Object Detection**
 - ssd
 - yolov3

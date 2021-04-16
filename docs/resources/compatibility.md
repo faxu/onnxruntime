@@ -20,7 +20,6 @@ Newer versions of ONNX Runtime support all models that worked with prior version
 ## Environment compatibility
 ONNX Runtime is not explicitly tested with every variation/combination of environments and dependencies, so this list is not comprehensive. Please use this as starting reference. For specific questions or requests, please [file an issue](https://github.com/microsoft/onnxruntime/issues) on Github.
 
-[Platforms](#Platforms) / [Languages](#Languages) / [Compilers](#Compilers) / [Dependent Libraries](#Dependent-Libraries)
 
 ### Platforms
 
@@ -47,11 +46,6 @@ ONNX Runtime is not explicitly tested with every variation/combination of enviro
 * iOS
   * Tested with iOS 12
   * May be compatible with any 64bit iOS version (5S+)
-
-### Languages
-* Python: 3.6 - 3.9
-* Java: 8+
-* NodeJS: 12.x+ or Electron v5.x+
 
 ### Compilers
 * Windows 10: Visual C++ 2019

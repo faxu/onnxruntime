@@ -66,7 +66,7 @@ Running `'python <ORT repository root>/tools/python/convert_onnx_models_to_ort.p
 
 You will need to build ONNX Runtime from source to reduce the included operator kernels and other aspects of the binary.
 
-See [here](https://www.onnxruntime.ai/docs/how-to/build.html#cpu) for the general ONNX Runtime build instructions.
+See [here](./build.html#cpu) for the general ONNX Runtime build instructions.
 
 
 #### Binary size reduction options:
@@ -75,14 +75,14 @@ The follow options can be used to reduce the build size. Enable all options that
   - Reduce build to required operator kernels
     - Add `--include_ops_by_config <config file produced by step 1> --skip_tests` to the build parameters.
       - To enable operator type reduction, also add `--enable_reduced_operator_type_support`.
-    - See the documentation on the [Reduced Operator Kernel build](Reduced_Operator_Kernel_build.md) for more information. This step can also be done pre-build if needed.
+    - See the documentation on the [Reduced Operator Kernel build](../resources/reduced_ops_build.html) for more information. This step can also be done pre-build if needed.
       - NOTE: This step will edit some of the ONNX Runtime source files to exclude unused kernels. If you wish to go back to creating a full build, or wish to change the operator kernels included, you should run `git reset --hard` or `git checkout HEAD -- ./onnxruntime/core/providers` to undo these changes.
 
   - Enable minimal build (`--minimal_build`)
     - A minimal build will ONLY support loading and executing ORT format models.
     - RTTI is disabled by default in this build, unless the Python bindings (`--build_wheel`) are enabled.
     - If you wish to enable execution providers that compile kernels such as NNAPI specify `--minimal_build extended`.
-      - See [here](#Using-NNAPI-with-ONNX-Runtime-Mobile) for more information about using NNAPI with ONNX Runtime Mobile on Android platforms
+      - See [here](#using-nnapi-with-onnx-runtime-mobile) for more information about using NNAPI with ONNX Runtime Mobile on Android platforms
 
   - Disable exceptions (`--disable_exceptions`)
     - Disables support for exceptions in the build.
@@ -127,7 +127,7 @@ The wheel can be installed using `pip`. Adjust the following command for your pl
 
 ## Executing ORT format models
 
-The API for executing ORT format models is the same as for ONNX models. See the [ONNX Runtime API documentation](https://github.com/Microsoft/onnxruntime/#api-documentation).
+The API for executing ORT format models is the same as for ONNX models. See the [ONNX Runtime API documentation](../reference/api).
 
 If you provide a filename for the ORT format model, a file extension of '.ort' will be inferred to be an ORT format model.
 If you provide in-memory bytes for the ORT format model, a marker in those bytes will be checked to infer if it's an ORT format model.
@@ -151,13 +151,13 @@ session = onnxruntime.InferenceSession(<path to model>, so)
 
 Using the NNAPI Execution Provider on Android platforms is now supported by ONNX Runtime Mobile. A minimal build targeting Android with NNAPI support must be created. An ORT format model that only uses ONNX operators is also recommended as a starting point.
 
-For a more in-depth analysis of the performance considerations when using NNAPI with an ORT format model please see [ONNX Runtime Mobile: Performance Considerations When Using NNAPI](ONNX_Runtime_Mobile_NNAPI_perf_considerations.md).
+For a more in-depth analysis of the performance considerations when using NNAPI with an ORT format model please see [ONNX Runtime Mobile: Performance Considerations When Using NNAPI](https://github.com/microsoft/onnxruntime/blob/master/docs/ONNX_Runtime_Mobile_NNAPI_perf_considerations.md).
 
 ### Limit ORT format model to ONNX operators
 
-The NNAPI Execution Provider is only able to execute ONNX operators using NNAPI. When creating the ORT format model it is recommended to limit the optimization level to 'basic' so that custom internal ONNX Runtime operators are not added by the 'extended' optimizations. This will ensure that the maximum number of nodes can be executed using NNAPI. See the [graph optimization](https://www.onnxruntime.ai/docs/resources/graph-optimizations.html) documentation for details on the optimization levels.
+The NNAPI Execution Provider is only able to execute ONNX operators using NNAPI. When creating the ORT format model it is recommended to limit the optimization level to 'basic' so that custom internal ONNX Runtime operators are not added by the 'extended' optimizations. This will ensure that the maximum number of nodes can be executed using NNAPI. See the [graph optimization](../resources/graph-optimizations.html) documentation for details on the optimization levels.
 
-To limit the optimization level when creating the ORT format models using `tools\python\convert_onnx_models_to_ort.py` as per the above [instructions](#1-Create-ORT-format-model-and-configuration-file-with-required-operators), add `--optimization_level basic` to the arguments.
+To limit the optimization level when creating the ORT format models using `tools\python\convert_onnx_models_to_ort.py` as per the above [instructions](#1-create-ort-format-model-and-configuration-file-with-required-operators), add `--optimization_level basic` to the arguments.
   - e.g. `python <ORT repository root>/tools/python/convert_onnx_models_to_ort.py --optimization_level basic /models`
 
 ### Create a minimal build for Android with NNAPI support
