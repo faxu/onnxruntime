@@ -25,7 +25,7 @@ These tutorials demonstrate basic inferencing with ONNX Runtime with each langua
 
 ### C++
 {: .no_toc }
-* [Number recognition (MNIST)](/tutorials/mnist_cpp.html)
+* [Number recognition (MNIST)](./tutorials/mnist_cpp.html)
 * [Image classification (Squeezenet)](https://github.com/microsoft/onnxruntime/blob/master/csharp/test/Microsoft.ML.OnnxRuntime.EndToEndTests.Capi/CXX_Api_Sample.cpp)
 
 ### C
@@ -34,12 +34,12 @@ These tutorials demonstrate basic inferencing with ONNX Runtime with each langua
 
 ### C#
 {: .no_toc }
-* [Object detection (Faster RCNN)](/tutorials/fasterrcnn_csharp.html)
-* [Image recognition (ResNet50 v2)](/tutorials/resnet50_csharp.html)
+* [Object detection (Faster RCNN)](./tutorials/fasterrcnn_csharp.html)
+* [Image recognition (ResNet50 v2)](./tutorials/resnet50_csharp.html)
 
 ### Java
 {: .no_toc }
-* [Number recognition (MNIST)](/tutorials/mnist_java.html)
+* [Number recognition (MNIST)](./tutorials/mnist_java.html)
 
 ### Node.js
 {: .no_toc }
