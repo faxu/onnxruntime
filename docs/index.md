@@ -4,6 +4,7 @@ has_children: false
 nav_order: 1
 ---
 # Welcome to ONNX Runtime
+{: .no_toc }
 
 ONNX Runtime is an accelerator for machine learning models with multi platform support and a flexible interface to integrate with hardware-specific libraries. ONNX Runtime can be used with models from PyTorch, Tensorflow/Keras, TFLite, scikit-learn, and other frameworks.
 
@@ -33,10 +34,10 @@ ONNX Runtime applies a number of graph optimizations on the model graph then par
 ### Get started with ORT for inferencing
 {: .no_toc }
 
-* [Get Started: Inferencing](../tutorials/get-started.html#inferencing)
-* [ORT on Mobile](../tutorials/portability.html#mobile)
-* [ORT on IoT/Edge](../tutorials/portability.html#iotedge)
-* [ORT with Azure Machine Learning](..tutorials/ecosystem.html#azure-machine-learning-services)
+* [Get Started: Inferencing](./tutorials/get-started.html#inferencing)
+* [ORT on Mobile](./tutorials/portability.html#mobile)
+* [ORT on IoT/Edge](./tutorials/portability.html#iotedge)
+* [ORT with Azure Machine Learning](.tutorials/ecosystem.html#azure-machine-learning-services)
 
 
 ## ONNX Runtime for Training
@@ -51,7 +52,7 @@ Using the ORTModule class wrapper, ONNX Runtime for PyTorch runs the forward an
 ### Get started with ORT for training
 {: .no_toc }
 
-* Get STarted: Training](../tutorials/get-started.html#training)
+* [Get Started: Training](./tutorials/get-started.html#training)
 
 
 
