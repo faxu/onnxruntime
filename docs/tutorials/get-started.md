@@ -1,5 +1,5 @@
 ---
-title: Basics
+title: Get Started
 parent: Tutorials
 nav_order: 1
 ---

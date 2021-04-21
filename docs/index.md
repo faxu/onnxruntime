@@ -1,9 +1,9 @@
 ---
-title: Get Started
+title: ONNX Runtime
 has_children: true
 nav_order: 1
 ---
-# Get Started with ONNX Runtime
+# Welcome to ONNX Runtime
 
 **ONNX Runtime** is a cross-platform machine learning **inferencing and training accelerator** for models from popular ML/DNN frameworks, including PyTorch, TensorFlow/Keras, scikit-learn, and more.
 
