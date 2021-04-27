@@ -1,7 +1,7 @@
 ---
 title: Use custom operators
 parent: How to
-nav_order: 5
+nav_order: 6
 ---
 # Custom operators
 {: .no_toc }

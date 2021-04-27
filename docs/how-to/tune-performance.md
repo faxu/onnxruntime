@@ -1,7 +1,7 @@
 ---
 title: Tune performance
 parent: How to
-nav_order: 3
+nav_order: 4
 ---
 
 # ONNX Runtime Performance Tuning

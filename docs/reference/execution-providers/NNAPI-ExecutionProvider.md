@@ -73,14 +73,14 @@ uint32_t nnapi_flags = 0;
 nnapi_flags |= NNAPI_FLAG_USE_FP16;
 ```
 
-# Performance Tuning
+## Performance Tuning
 
 ONNX Runtime Mobile with the NNAPI Execution Provider (EP) can be used to execute ORT format models on Android platforms using NNAPI. This section explains the details of how different optimizations affect performance, and provides some suggestions for performance testing with ORT format models.
 
 Please first review the introductory details in [using NNAPI with ONNX Runtime Mobile](../../how-to/mobile.html#Using-NNAPI-with-ONNX-Runtime-Mobile).
 
 
-## 1. ONNX Model Optimization Example
+### 1. ONNX Model Optimization Example
 
 ONNX Runtime applies optimizations to the ONNX model to improve inferencing performance. These optimizations occur prior to exporting an ORT format model. See the [graph optimization](../resources/graph-optimizations.html) documentation for further details of the available optimizations.
 
@@ -98,7 +98,7 @@ The _extended_ optimizations replace one or more standard ONNX operators with cu
 
 _Layout_ optimizations are hardware specific, and should not be used when creating ORT format models.
 
-### Outcome of optimizations when creating an optimized ORT format model
+#### Outcome of optimizations when creating an optimized ORT format model
 
 Below is an example of the changes that occur in _basic_ and _extended_ optimizations when applied to the MNIST model with only the CPU EP enabled. The optimization level is specified when creating the ORT format model using `convert_onnx_models_to_ort.py`.
 
@@ -109,7 +109,7 @@ Below is an example of the changes that occur in _basic_ and _extended_ optimiza
 
 ![Changes to nodes from basic and extended optimizations](../../../images/mnist_optimization.png)
 
-### Outcome of executing an optimized ORT format model using the NNAPI EP
+#### Outcome of executing an optimized ORT format model using the NNAPI EP
 
 If the NNAPI EP is registered at runtime, it is given an opportunity to select the nodes in the loaded model that it can execute. When doing so it will group as many nodes together as possible to minimize the overhead of copying data between the CPU and NNAPI to execute the nodes. Each group of nodes can be considered as a sub-graph. The more nodes in each sub-graph, and the fewer sub-graphs, the better the performance will be.
 
@@ -125,7 +125,7 @@ The _extended_ level optimizations introduce the custom FusedConv nodes, which t
 
 ![Changes to nodes by NNAPI EP depending on the optimization level the model was created with](../../../images/mnist_optimization_with_nnapi.png)
 
-## 2. Initial Performance Testing
+### 2. Initial Performance Testing
 
 The best optimization settings will differ by model. Some models may perform better with NNAPI, some models may not. As the performance will be model specific you must performance test to determine the best combination for your model.
 
@@ -137,7 +137,7 @@ For most scenarios it is expected that one of these two approaches will yield th
 
 If using an ORT format model with _basic_ level optimizations and NNAPI yields equivalent or better performance, it _may_ be possible to further improve performance by creating an NNAPI-aware ORT format model. The difference with this model is that the _extended_ optimizations are applied to nodes that can not be executed using NNAPI. Whether any nodes fall into this category is model dependent.
 
-## 3. Creating an NNAPI-aware ORT format model
+### 3. Creating an NNAPI-aware ORT format model
 
 An NNAPI-aware ORT format model will keep all nodes from the ONNX model that can be executed using NNAPI, and allow _extended_ optimizations to be applied to any remaining nodes.
 

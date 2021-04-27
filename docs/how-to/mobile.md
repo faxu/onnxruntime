@@ -1,7 +1,7 @@
 ---
 title: Build for mobile
 parent: How to
-nav_order: 2
+nav_order: 3
 toc: true
 
 ---

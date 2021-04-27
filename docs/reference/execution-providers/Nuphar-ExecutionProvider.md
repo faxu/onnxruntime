@@ -126,6 +126,8 @@ create_shared.sh -c /path/to/jit/cache/NUPHAR_CACHE_VERSION [-m optional_model_f
 # Checksum verification failure will cause Nuphar to fallback to JIT instead of loading binary from cache
 # run Nuphar inference again with cached JIT dll
 ```
+## Samples
+* [Sample notebook for NUPHAR execution provider](https://github.com/microsoft/onnxruntime/blob/master/docs/python/inference/notebooks/onnxruntime-nuphar-tutorial.ipynb)
 
 ## Debugging
 

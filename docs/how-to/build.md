@@ -1,7 +1,7 @@
 ---
 title: Build from source
 parent: How to
-nav_order: 1
+nav_order: 2
 ---
 
 # Build ONNX Runtime from source

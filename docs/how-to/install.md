@@ -1,7 +1,7 @@
 ---
-title: Install
-parent: Get Started
-nav_order: 2
+title: Install ONNX Runtime
+parent: How to
+nav_order: 1
 ---
 
 # Install ONNX Runtime
