@@ -20,6 +20,8 @@ With the TensorRT execution provider, the ONNX Runtime delivers better inferenci
 
 ## Build
 
+See [Build instructions](../../how-to/build-eps.md#tensorrt).
+
 The TensorRT execution provider for ONNX Runtime is built and tested with TensorRT 7.1.3.4.
 
 ## Usage
@@ -75,13 +77,13 @@ There are several environment variables for TensorRT execution provider.
 One can override default values by setting environment variables ORT_TENSORRT_MAX_WORKSPACE_SIZE, ORT_TENSORRT_MAX_PARTITION_ITERATIONS, ORT_TENSORRT_MIN_SUBGRAPH_SIZE, ORT_TENSORRT_FP16_ENABLE, ORT_TENSORRT_INT8_ENABLE, ORT_TENSORRT_INT8_CALIBRATION_TABLE_NAME, ORT_TENSORRT_INT8_USE_NATIVE_CALIBRATION_TABLE, ORT_TENSORRT_ENGINE_CACHE_ENABLE, ORT_TENSORRT_CACHE_PATH and ORT_TENSORRT_DUMP_SUBGRAPHS.
 e.g. on Linux
 
-### override default max workspace size to 2GB
+### Override default max workspace size to 2GB
 export ORT_TENSORRT_MAX_WORKSPACE_SIZE=2147483648
 
-### override default maximum number of iterations to 10 
+### Override default maximum number of iterations to 10 
 export ORT_TENSORRT_MAX_PARTITION_ITERATIONS=10
         
-### override default minimum subgraph node size to 5
+### Override default minimum subgraph node size to 5
 export ORT_TENSORRT_MIN_SUBGRAPH_SIZE=5
 
 ### Enable FP16 mode in TensorRT

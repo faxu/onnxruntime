@@ -17,6 +17,7 @@ nav_order: 2
 ## CPU
 
 ### Build Instructions
+{: .no_toc }
 
 To build ORT with training support add `--enable_training` build instruction.
 
@@ -40,6 +41,7 @@ The default Windows CMake Generator is Visual Studio 2017, but you can also use 
 
 ## GPU / CUDA
 ### Prerequisites
+{: .no_toc }
 
 The default NVIDIA GPU build requires CUDA runtime libraries installed on the system:
 
@@ -52,6 +54,7 @@ The default NVIDIA GPU build requires CUDA runtime libraries installed on the sy
 These dependency versions should reflect what is in [Dockerfile.training](https://github.com/microsoft/onnxruntime/blob/master/dockerfiles/Dockerfile.training).
 
 ### Build instructions
+{: .no_toc }
 
 1. Checkout this code repo with `git clone https://github.com/microsoft/onnxruntime`
 
@@ -75,6 +78,7 @@ These dependency versions should reflect what is in [Dockerfile.training](https:
 
 ## GPU / ROCM
 ### Prerequisites
+{: .no_toc }
 
 The default AMD GPU build requires ROCM software toolkit installed on the system:
 
@@ -85,6 +89,7 @@ The default AMD GPU build requires ROCM software toolkit installed on the system
 These dependency versions should reflect what is in [Dockerfile.training](./dockerfiles/Dockerfile.training).
 
 ### Build instructions
+{: .no_toc }
 
 1. Checkout this code repo with `git clone https://github.com/microsoft/onnxruntime`
 
@@ -98,6 +103,7 @@ These dependency versions should reflect what is in [Dockerfile.training](./dock
 ## DNNL and MKLML
 
 ### Build Instructions
+{: .no_toc }
 #### Linux
 
 `./build.sh --enable_training --use_dnnl`

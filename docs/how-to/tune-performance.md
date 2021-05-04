@@ -187,6 +187,7 @@ The answers below are troubleshooting suggestions based on common previous user-
 
 
 ### Performance Troubleshooting Checklist
+{: .no_toc }
 
 Here is a list of things to check through when assessing performance issues.
 * Are you using OpenMP? OpenMP will parallelize some of the code for potential performance improvements. This is not recommended for running on single threads.
@@ -195,18 +196,22 @@ Here is a list of things to check through when assessing performance issues.
 * If using CUDA or TensorRT, do you have the right versions of the dependent libraries installed? 
 
 ### I need help performance tuning for BERT models
+{: .no_toc }
 
 For BERT models, sometimes ONNX Runtime cannot apply the best optimization due to reasons such as framework version updates. We recommend trying out the [BERT optimization tool](https://github.com/microsoft/onnxruntime/tree/master/onnxruntime/python/tools/transformers), which reflects the latest changes in graph pattern matching and model conversions, and a set of [notebooks](https://github.com/microsoft/onnxruntime/tree/master/onnxruntime/python/tools/transformers/notebooks) to help get started.
 
 ### Why is the model graph not optimized even with graph_optimization_level set to ORT_ENABLE_ALL?
+{: .no_toc }
 
 The ONNX model from IR_VERSION 4 only treats initializers that appear in graph input as non-constant. This may fail some of the graph optimizations, like const folding, operator fusion and etc. Move initializers out of graph inputs if there is no need to override them, by either re-generating the model with latest exporter/converter or with the tool [remove_initializer_from_input.py](https://github.com/microsoft/onnxruntime/tree/master/tools/python/remove_initializer_from_input.py).
 
 ### Why is my model running slower on GPU than CPU?
+{: .no_toc }
 
 Depending on which execution provider you're using, it may not have full support for all the operators in your model. Fallback to CPU ops can cause hits in performance speed. Moreover even if an op is implemented by the CUDA execution provider, it may not necessarily assign/place the op to the CUDA EP due to performance reasons. To see the placement decided by ORT, turn on verbose logging and look at the console output.
 
 ### My converted Tensorflow model is slow - why?
+{: .no_toc }
 
 NCHW and NHWC are two different memory layout for 4-D tensors.
 

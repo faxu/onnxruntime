@@ -17,7 +17,7 @@ nav_order: 9
 [ArmNN](https://github.com/ARM-software/armnn) is an open source inference engine maintained by Arm and Linaro companies. The integration of ArmNN as an execution provider (EP) into ONNX Runtime accelerates performance of ONNX model workloads across Armv8 cores.
 
 ## Build
-For build instructions, please see the [BUILD page](../../how-to/build.md#ArmNN).
+For build instructions, please see the [BUILD page](../../how-to/build-eps.md#ArmNN).
 
 ## Usage
 ### C/C++

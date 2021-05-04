@@ -1,5 +1,5 @@
 ---
-title: Install ONNX Runtime
+title: Install ORT
 parent: How to
 nav_order: 1
 ---
@@ -7,36 +7,31 @@ nav_order: 1
 # Install ONNX Runtime
 {: .no_toc }
 
+See the [installation matrix](https://onnxruntime.ai) for recommended instructions for desired combinations of target operating system, hardware, accelerator, and language. 
+
+Details on OS versions, compilers, language versions, dependent libraries , etc can be found under [Compatibility](../resources/compatibility.md#Environment-compatibility).
+
 ## Contents
 {: .no_toc }
 
 * TOC placeholder
 {:toc}
 
-See the [installation matrix](https://onnxruntime.ai) for recommended instructions for desired combinations of target operating system, hardware, accelerator, and language. 
+## Inference
 
-Details on OS versions, compilers, language versions, dependent libraries , etc can be found under [Compatibility](../resources/compatibility.md#Environment-compatibility).
+### Requirements
+{: .no_toc }
 
-
-## Requirements
-### General
-All builds require the English language package with `en_US.UTF-8` locale. On Linux, install [language-pack-en package](https://packages.ubuntu.com/search?keywords=language-pack-en)
+* All builds require the English language package with `en_US.UTF-8` locale. On Linux, install [language-pack-en package](https://packages.ubuntu.com/search?keywords=language-pack-en)
 by running `locale-gen en_US.UTF-8` and `update-locale LANG=en_US.UTF-8`
 
-###  CUDA build
-The GPU (CUDA) package requires:
+* The GPU CUDA build requires installation of compatible CUDA and cuDNN libraries: see [CUDA Execution Provider requirements](../reference/execution-providers/CUDA-ExecutionProvider.html#requirements).
 
-  |Linux|Windows|
-  |---|---|
-  |**CUDA 11.0.3 and cuDNN 8.0.2.4**<br/>libcudart 11.0.221<br/>libcufft 10.2.1.245<br/>libcurand 10.2.1.245<br/>libcublasLt 11.2.0.252<br/>libcublas 11.2.0.252<br/>libcudnn 8.0.4|**CUDA 11.0.3 and cuDNN 8.0.2.39**|
+* Windows builds require [Visual C++ 2019 runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
 
-    
-   CUDA version dependencies for older ONNX Runtime releases are listed [here](../reference/execution-providers/CUDA-ExecutionProvider.html#version-dependency).
+### Published Builds
+{: .no_toc }
 
-### Windows builds
-Windows builds require [Visual C++ 2019 runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
-
-## Install
 The following build variants are available as officially supported packages. Others can be [built from source](../how-to/build.md) from each release branch.
 
 1. Default CPU Provider
@@ -58,7 +53,12 @@ The following build variants are available as officially supported packages. Oth
 |Other|[Contributed non-official packages](https://docs.microsoft.com/en-us/windows/ai/windows-ml/get-started-uwp) (including Homebrew, Linuxbrew, and nixpkgs).<br/>*These are not maintained by the core ONNX Runtime team and may have limited support; use at your discretion.*|
 
 
-## Docker Images
+### Docker Images
+{: .no_toc }
+
 * [ONNX-Ecosystem](https://github.com/onnx/onnx-docker/tree/master/onnx-ecosystem): Includes ONNX, ONNX Runtime (CPU, Python), dependencies, tools to convert from various frameworks, and Jupyter notebooks to get started
 * [Dockerfiles for ONNX Runtime](https://github.com/microsoft/onnxruntime/tree/master/dockerfiles)
 
+## Training
+
+*COMING SOON*

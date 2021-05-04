@@ -28,10 +28,10 @@ ONNX Runtime supports many different execution providers today. Some of the EPs 
 
 |CPU|GPU|IoT/Edge/Mobile|Other|
 ---|---|---|---
-|Default CPU - *MLAS (Microsoft Linear Algebra Subprograms) + Eigen*|NVIDIA CUDA|[Intel OpenVINO](../reference/execution-providers/OpenVINO-ExecutionProvider.md)||
-|[Intel DNNL](../reference/execution-providers/DNNL-ExecutionProvider.md)|[NVIDIA TensorRT](../reference/execution-providers/TensorRT-ExecutionProvider.md)|[ARM Compute Library](../reference/execution-providers/ACL-ExecutionProvider.md) (*preview*)|[Rockchip NPU](../reference/execution-providers/RKNPU-ExecutionProvider.md) (*preview*)|
-|[Intel nGraph](../reference/execution-providers/nGraph-ExecutionProvider.md)|[DirectML](../reference/execution-providers/DirectML-ExecutionProvider.md)|[Android Neural Networks API](../reference/execution-providers/NNAPI-ExecutionProvider.md) (*preview*)|[Xilinx Vitis-AI](../reference/execution-providers/Vitis-AI-ExecutionProvider.md) (*preview*)|
-||[AMD MIGraphX](../reference/execution-providers/MIGraphX-ExecutionProvider.md) (*preview*)|[ARM-NN](../reference/execution-providers/ArmNN-ExecutionProvider.md) (*preview*)|
+|Default CPU - *MLAS (Microsoft Linear Algebra Subprograms) + Eigen*|NVIDIA CUDA|[Intel OpenVINO](../execution-providers/OpenVINO-ExecutionProvider.md)||
+|[Intel DNNL](../execution-providers/DNNL-ExecutionProvider.md)|[NVIDIA TensorRT](../execution-providers/TensorRT-ExecutionProvider.md)|[ARM Compute Library](../execution-providers/ACL-ExecutionProvider.md) (*preview*)|[Rockchip NPU](../execution-providers/RKNPU-ExecutionProvider.md) (*preview*)|
+|[Intel nGraph](../execution-providers/nGraph-ExecutionProvider.md)|[DirectML](../execution-providers/DirectML-ExecutionProvider.md)|[Android Neural Networks API](../execution-providers/NNAPI-ExecutionProvider.md) (*preview*)|[Xilinx Vitis-AI](../execution-providers/Vitis-AI-ExecutionProvider.md) (*preview*)|
+||[AMD MIGraphX](../execution-providers/MIGraphX-ExecutionProvider.md) (*preview*)|[ARM-NN](../execution-providers/ArmNN-ExecutionProvider.md) (*preview*)|
 
 ### Add an Execution Provider
 
@@ -39,7 +39,7 @@ Developers of specialized HW acceleration solutions can integrate with ONNX Runt
 
 ### Build ONNX Runtime package with EPs
 
-The ONNX Runtime package can be built with any combination of the EPs along with the default CPU execution provider. **Note** that if multiple EPs are combined into the same ONNX Runtime package then all the dependent libraries must be present in the execution environment. The steps for producing the ONNX Runtime package with different EPs is documented [here](../../how-to/build.md#execution-providers).
+The ONNX Runtime package can be built with any combination of the EPs along with the default CPU execution provider. **Note** that if multiple EPs are combined into the same ONNX Runtime package then all the dependent libraries must be present in the execution environment. The steps for producing the ONNX Runtime package with different EPs is documented [here](../../how-to/build-inferencing.md#execution-providers).
 
 ### APIs for Execution Provider
 

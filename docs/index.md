@@ -34,9 +34,9 @@ ONNX Runtime applies a number of graph optimizations on the model graph then par
 ### Get started with ORT for inferencing
 {: .no_toc }
 
-* [Get Started: Inferencing](./tutorials/get-started.html#inferencing)
-* [ORT on Mobile](./tutorials/portability.html#mobile)
-* [ORT on IoT/Edge](./tutorials/portability.html#iotedge)
+* [Get Started: Inferencing](./tutorials/inferencing/get-started.html)
+* [ORT on Mobile](./tutorials/inferencing/mobile.html)
+* [ORT on IoT/Edge](./tutorials/inferencing/iot-edge.html)
 * [ORT with Azure Machine Learning](.tutorials/ecosystem.html#azure-machine-learning-services)
 
 
@@ -52,7 +52,7 @@ Using the ORTModule class wrapper, ONNX Runtime for PyTorch runs the forward an
 ### Get started with ORT for training
 {: .no_toc }
 
-* [Get Started: Training](./tutorials/get-started.html#training)
+* [Get Started: Training](./tutorials/training/get-started.html)
 
 
 

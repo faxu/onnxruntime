@@ -1,5 +1,5 @@
 ---
-title: ARM Compute Library (ACL)
+title: ARM Compute Library
 parent: Execution Providers
 grand_parent: Reference
 nav_order: 8
@@ -19,7 +19,7 @@ nav_order: 8
 
 
 ## Build
-For build instructions, please see the [BUILD page](../../how-to/build.md#ARM-Compute-Library).
+For build instructions, please see the [BUILD page](../../how-to/build-eps.md#ARM-Compute-Library).
 
 ## Usage
 ### C/C++

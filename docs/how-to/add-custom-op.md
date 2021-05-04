@@ -29,7 +29,7 @@ A new op can be registered with ONNX Runtime using the Custom Operator API (onnx
 
 * [Custom op shared library with Python API](https://github.com/microsoft/onnxruntime/blob/master/onnxruntime/test/python/onnxruntime_test_python.py): `testRegisterCustomOpsLibrary` uses the Python API to register a shared library with custom op kernels. Currently, the only supported Execution Providers (EPs) for custom ops registered via this approach are the CUDA and the CPU EPs.
 
-* [E2E example: Export and run a PyTorch model with custom op](./export-pytorch-model.html)
+* [E2E example: Export and run a PyTorch model with custom op](../tutorials/tutorials/export-pytorch-model.html)
 
 ## CUDA custom ops
 When a model being inferred on GPU, onnxruntime will insert MemcpyToHost op before a CPU custom op and append MemcpyFromHost after to make sure tensor(s) are accessible throughout calling, meaning there are no extra efforts required from custom op developer for the case.

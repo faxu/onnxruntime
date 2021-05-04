@@ -1,5 +1,5 @@
 ---
-title: Deploy ML model on IoT and edge devices
+title: Deploy on IoT and edge
 grand_parent: Tutorials
 parent: Inferencing
 has_children: false

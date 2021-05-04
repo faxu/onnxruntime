@@ -34,10 +34,8 @@ DirectML is compatible with Windows 10, version 1709 (10.0.16299; RS3, "Fall Cre
 
 ## Build
 
-For general information about building onnxruntime, see [BUILD](../../how-to/build.md).
-
 Requirements for building the DirectML execution provider:
-1. Visual Studio 2017 toolchain (see [cmake configuration instructions](../../how-to/build.md))
+1. Visual Studio 2017 toolchain (see [cmake configuration instructions](../../how-to/build-inferencing.md))
 2. [The Windows 10 SDK (10.0.18362.0) for Windows 10, version 1903](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk) (or newer)
 
 To build onnxruntime with the DML EP included, supply the `--use_dml` parameter to `build.bat`. e.g.
@@ -52,9 +50,10 @@ Note that building onnxruntime with the DirectML execution provider enabled caus
 
 ## Usage
 
-When using the [C API](../api/c-api.md) with a DML-enabled build of onnxruntime (see [Building from source](#building-from-source)), the DirectML execution provider can be enabled using one of the two factory functions included in `include/onnxruntime/core/providers/dml/dml_provider_factory.h`.
+When using the [C API](../api/c-api.md) with a DML-enabled build of onnxruntime, the DirectML execution provider can be enabled using one of the two factory functions included in `include/onnxruntime/core/providers/dml/dml_provider_factory.h`.
 
 ### `OrtSessionOptionsAppendExecutionProvider_DML` function
+{: .no_toc }
 
  Creates a DirectML Execution Provider which executes on the hardware adapter with the given `device_id`, also known as the adapter index. The device ID corresponds to the enumeration order of hardware adapters as given by [IDXGIFactory::EnumAdapters](https://docs.microsoft.com/windows/win32/api/dxgi/nf-dxgi-idxgifactory-enumadapters). A `device_id` of 0 always corresponds to the default adapter, which is typically the primary display GPU installed on the system. A negative `device_id` is invalid.
 
@@ -66,6 +65,7 @@ OrtStatus* OrtSessionOptionsAppendExecutionProvider_DML(
 ```
 
 ### `OrtSessionOptionsAppendExecutionProviderEx_DML` function
+{: .no_toc }
 
 Creates a DirectML Execution Provider using the given DirectML device, and which executes work on the supplied D3D12 command queue. The DirectML device and D3D12 command queue must have the same parent [ID3D12Device](https://docs.microsoft.com/windows/win32/api/d3d12/nn-d3d12-id3d12device), or an error will be returned. The D3D12 command queue must be of type `DIRECT` or `COMPUTE` (see [D3D12_COMMAND_LIST_TYPE](https://docs.microsoft.com/windows/win32/api/d3d12/ne-d3d12-d3d12_command_list_type)). If this function succeeds, the inference session once created will maintain a strong reference on both the `dml_device` and `command_queue` objects.
 
