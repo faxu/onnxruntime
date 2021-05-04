@@ -1,12 +1,11 @@
 ---
 title: Build for mobile
-parent: How to
+parent: Build ORT
 nav_order: 3
-toc: true
-
+grand_parent: How to
 ---
 
-# Build for mobile
+# Build ORT for mobile
 {: .no_toc }
 
 * TOC placeholder
@@ -22,7 +21,7 @@ I.e., the custom build provides a set of kernels, and if that set satisfies a gi
 
 ## Steps to create model and minimal build
 
-You will need a script from the ONNX Runtime repository and to also perform a custom build, so you will need to clone the repository locally. See [here](https://www.onnxruntime.ai/docs/how-to/build.html#prerequisites) for initial steps.
+You will need a script from the ONNX Runtime repository and to also perform a custom build, so you will need to clone the repository locally. See [here](./build.html#prerequisites) for initial steps.
 
 The directory the ONNX Runtime repository was cloned into is referred to as `<ONNX Runtime repository root>` in this documentation.
 

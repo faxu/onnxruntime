@@ -1,7 +1,7 @@
 ---
 title: Quantize ONNX Models
 parent: How to
-nav_order: 5
+nav_order: 4
 ---
 # Quantize ONNX Models
 {: .no_toc }

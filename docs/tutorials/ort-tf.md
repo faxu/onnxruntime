@@ -1,7 +1,7 @@
 ---
 title: Accelerate Tensorflow models
 parent: Tutorials
-nav_order: 3
+nav_order: 4
 ---
 # Accelerate Tensorflow models
 {: .no_toc }

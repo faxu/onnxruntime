@@ -1,7 +1,7 @@
 ---
 title: Accelerate Hugging Face models
 parent: Tutorials
-nav_order: 4
+nav_order: 5
 ---
 # Accelerate Hugging Face models
 {: .no_toc }

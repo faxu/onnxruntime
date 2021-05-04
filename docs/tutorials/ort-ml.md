@@ -2,7 +2,7 @@
 title: Deploy traditional ML models
 parent: Tutorials
 has_children: false
-nav_order: 4
+nav_order: 9
 ---
 
 # Tutorials: Deploy traditional ML models

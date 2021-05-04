@@ -1,7 +1,7 @@
 ---
 title: Accelerate PyTorch models
 parent: Tutorials
-nav_order: 2
+nav_order: 3
 ---
 # Accelerate PyTorch models
 {: .no_toc }

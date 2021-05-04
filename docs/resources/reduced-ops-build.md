@@ -50,6 +50,7 @@ optional arguments:
 ```
 
 ### Type reduction
+{: .no_toc }
 
 If the configuration file is created using ORT format models, the input/output types that individual operators require can be tracked if `--enable_type_reduction` is specified. This can be used to further reduce the build size if `--enable_reduced_operator_type_support` is specified when building ORT.
 
@@ -73,6 +74,7 @@ e.g. if a model imports opset 12 of ONNX, all ONNX operators in that model can b
 Additionally, the ONNX operator specs for [DNN](https://github.com/onnx/onnx/blob/master/docs/Operators.md) and [traditional ML](https://github.com/onnx/onnx/blob/master/docs/Operators-ml.md) operators list the individual operator versions.
 
 ### Type reduction format
+{: .no_toc }
 
 If the types an operator implementation supports can be limited to a specific set of types, this is specified in a JSON string immediately after the operator name in the configuration file.
 
