@@ -1,12 +1,13 @@
 ---
-title: Accelerate Tensorflow models
-parent: Tutorials
-nav_order: 4
+title: Accelerate TensorFlow models
+nav_order: 3
+grand_parent: Tutorials
+parent: Inferencing
 ---
-# Accelerate Tensorflow models
+# Accelerate TensorFlow model inferencing
 {: .no_toc }
 
-ONNX Runtime can help accelerate inferencing times for Tensorflow, TFLite, and Keras models. Deployment of TFLite models using ONNX Runtime Mobile provider portability for applications on server, client, and mobile devices.
+ONNX Runtime can accelerate inferencing times for Tensorflow, TFLite, and Keras models.
 
 ## Contents
 {: .no_toc }

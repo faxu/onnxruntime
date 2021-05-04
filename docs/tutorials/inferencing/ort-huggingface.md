@@ -1,7 +1,8 @@
 ---
 title: Accelerate Hugging Face models
-parent: Tutorials
-nav_order: 5
+grand_parent: Tutorials
+parent: Inferencing
+nav_order: 4
 ---
 # Accelerate Hugging Face models
 {: .no_toc }

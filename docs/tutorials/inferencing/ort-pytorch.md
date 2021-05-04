@@ -1,12 +1,13 @@
 ---
 title: Accelerate PyTorch models
-parent: Tutorials
-nav_order: 3
+grand_parent: Tutorials
+parent: Inferencing
+nav_order: 2
 ---
-# Accelerate PyTorch models
+# Accelerate PyTorch model inferencing
 {: .no_toc }
 
-ONNX Runtime can help accelerate PyTorch models in both training and inferencing tasks.
+ONNX Runtime can be used to accelerate PyTorch models inferencing. Models should first be exported to ONNX format through [torch.onnx](https://pytorch.org/docs/stable/onnx.html).
 
 ## Contents
 {: .no_toc }
@@ -16,7 +17,6 @@ ONNX Runtime can help accelerate PyTorch models in both training and inferencing
 
 ## Convert model to ONNX
 
-* [torch.onnx full documentation and samples](https://pytorch.org/docs/stable/onnx.html)
 * [Export PyTorch model with custom ops](./export-pytorch-model.md)
 
 ## Accelerate PyTorch model inferencing

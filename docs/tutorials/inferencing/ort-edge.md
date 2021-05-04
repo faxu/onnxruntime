@@ -1,8 +1,9 @@
 ---
 title: Deploy ML model on IoT and edge devices
-parent: Tutorials
+grand_parent: Tutorials
+parent: Inferencing
 has_children: false
-nav_order: 7
+nav_order: 6
 ---
 
 # Tutorials: Deploy ML model on IoT and edge devices

@@ -1,5 +1,5 @@
 ---
-title: Build ORT from source
+title: Build ORT
 parent: How to
 has_children: true
 nav_order: 2

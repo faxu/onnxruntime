@@ -1,8 +1,9 @@
 ---
 title: Deploy traditional ML models
-parent: Tutorials
+grand_parent: Tutorials
+parent: Inferencing
 has_children: false
-nav_order: 9
+nav_order: 7
 ---
 
 # Tutorials: Deploy traditional ML models

@@ -1,6 +1,7 @@
 ---
 title: Deploy ML model on web
-parent: Tutorials
+grand_parent: Tutorials
+parent: Inferencing
 has_children: false
 nav_order: 8
 ---

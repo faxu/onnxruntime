@@ -1,24 +1,18 @@
 ---
 title: ORT Ecosystem
 parent: Tutorials
-nav_order: 9
+nav_order: 3
 ---
 # ORT Ecosystem
 {: .no_toc }
 
-ONNX Runtime functions as part of an ecosystem of tools and platforms to deliver an end-to-end machine learning experience. Below is a list of popular tools and corresponding tutorials that work with and/or integrate ONNX Runtime.
+ONNX Runtime functions as part of an ecosystem of tools and platforms to deliver an end-to-end machine learning experience. Below are tutorials for some products that work with or integrate ONNX Runtime.
 
 ## Contents
 {: .no_toc }
 
 * TOC placeholder
 {:toc}
-
-## Model Conversion
-
-### Scikit-learn
-
-
 
 
 ## Azure Machine Learning Services
