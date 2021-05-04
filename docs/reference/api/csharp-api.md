@@ -82,4 +82,4 @@ var session = new InferenceSession("model.onnx", SessionOptions.MakeSessionOptio
 ```
 ## Samples
 
-See [Tutorials: Basics - C#](../../tutorials/basics.html#c-2)
+See [Tutorials: Basics - C#](../../tutorials/inference/get-started.html#c-2)

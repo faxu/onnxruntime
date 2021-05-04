@@ -22,7 +22,7 @@ Intel and Microsoft have developed the DNNL Execution Provider (EP) for ONNX Run
 
 ## Build
 
-For build instructions, please see the [BUILD page](../../how-to/build-eps.md#onednn).
+For build instructions, please see the [BUILD page](../../how-to/build/eps.md#onednn).
 
 
 ## Usage

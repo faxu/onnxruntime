@@ -21,11 +21,15 @@ This document covers basic tools and knobs that can be leveraged to find the bes
 
 ## Performance Tuning Tools
 
+### ONNX GO Live Tool
+{: .no_toc }
+
 The [ONNX Go Live "OLive" tool](https://github.com/microsoft/OLive) is an easy-to-use pipeline for converting models to ONNX and optimizing performance with ONNX Runtime. The tool can help identify the optimal runtime configuration to get the best performance on the target hardware for the model.
 
 As a quickstart, please see the notebooks: [Python](https://github.com/microsoft/OLive/blob/master/notebook/Convert_Models_and_Tune_Performance_with_OLive_Python_SDK.ipynb), [Docker images](https://github.com/microsoft/OLive/blob/master/notebook/Convert_Models_and_Tune_Performance_with_OLive_Docker_Images.ipynb)
 
 ### Profiling and Performance Report
+{: .no_toc }
 
 The onnxruntime_perf_test.exe tool (available from the build drop) can be used to test various knobs. Please find the usage instructions using `onnxruntime_perf_test.exe -h`.
 
@@ -51,6 +55,7 @@ In both cases, you will get a JSON file which contains the detailed performance 
 To learn more about different Execution Providers, see [docs/exeuction_providers](../reference/execution-providers).
 
 ### Build the EP
+{: .no_toc }
 
 **Python**
 
@@ -74,6 +79,7 @@ For example:
 
 
 ### Register the EP
+{: .no_toc }
 
 In order to use DNNL, CUDA, or TensorRT execution provider, you need to call the C API OrtSessionOptionsAppendExecutionProvider.
 

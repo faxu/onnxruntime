@@ -1,5 +1,5 @@
 ---
-title: Build with various EPs
+title: Build with different EPs
 parent: Build ORT
 grand_parent: How to
 nav_order: 3
@@ -570,6 +570,7 @@ See more information on the MIGraphX Execution Provider [here](../reference/exec
   * The path to MIGraphX installation must be provided via the `--migraphx_home parameter`.
 
 ### Build Instructions
+{: .no_toc }
 
 #### Linux
 

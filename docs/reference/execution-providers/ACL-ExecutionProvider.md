@@ -19,10 +19,12 @@ nav_order: 8
 
 
 ## Build
-For build instructions, please see the [BUILD page](../../how-to/build-eps.md#ARM-Compute-Library).
+For build instructions, please see the [BUILD page](../../how-to/build/eps.md#ARM-Compute-Library).
 
 ## Usage
 ### C/C++
+{: .no_toc }
+
 ```
 Ort::Env env = Ort::Env{ORT_LOGGING_LEVEL_ERROR, "Default"};
 Ort::SessionOptions sf;

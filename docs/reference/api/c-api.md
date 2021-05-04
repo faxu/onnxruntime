@@ -99,4 +99,4 @@ To turn on/off telemetry collection on official Windows builds, please use Enabl
 
 ## Samples
 
-See [Tutorials: Basics - C](../../tutorials/basics.html#c-1)
+See [Tutorials: Basics - C](../../tutorials/inference/get-started.html#c-1)

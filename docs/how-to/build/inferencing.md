@@ -75,6 +75,7 @@ Also, if you want to cross-compile for Apple Silicon in an Intel-based MacOS mac
 ## Supported architectures and build environments
 
 ### Architectures
+{: .no_toc }
 
 |           | x86_32       | x86_64       | ARM32v7      | ARM64        |
 |-----------|:------------:|:------------:|:------------:|:------------:|
@@ -83,6 +84,7 @@ Also, if you want to cross-compile for Apple Silicon in an Intel-based MacOS mac
 |macOS      | NO           | YES          |  NO          | NO           |
 
 ### Environments
+{: .no_toc }
 
 | OS          | Supports CPU | Supports GPU| Notes                              |
 |-------------|:------------:|:------------:|------------------------------------|
@@ -94,6 +96,7 @@ Also, if you want to cross-compile for Apple Silicon in an Intel-based MacOS mac
 GCC 4.x and below are not supported.
 
 ### OS/Compiler Matrix
+{: .no_toc }
 
 | OS/Compiler | Supports VC  | Supports GCC     |  Supports Clang  |
 |-------------|:------------:|:----------------:|:----------------:|
@@ -247,10 +250,10 @@ Also known as [x86_64](https://en.wikipedia.org/wiki/X86-64) or AMD64. This is t
 
 There are a few options for building for ARM.
 
-* [Cross compiling for ARM with simulation (Linux/Windows)](#Cross-compiling-for-ARM-with-simulation-LinuxWindows) - **Recommended**;  Easy, slow
-* [Cross compiling on Linux](#Cross-compiling-on-Linux) - Difficult, fast
-* [Native compiling on Linux ARM device](#Native-compiling-on-Linux-ARM-device) - Easy, slower
-* [Cross compiling on Windows](#Cross-compiling-on-Windows)
+* [Cross compiling for ARM with simulation (Linux/Windows)](#cross-compiling-for-arm-with-simulation-linuxwindows) - **Recommended**;  Easy, slow
+* [Cross compiling on Linux](#cross-compiling-on-linux) - Difficult, fast
+* [Native compiling on Linux ARM device](#native-compiling-on-linux-arm-device) - Easy, slower
+* [Cross compiling on Windows](#cross-compiling-on-windows)
 
 #### Cross compiling for ARM with simulation (Linux/Windows)
 

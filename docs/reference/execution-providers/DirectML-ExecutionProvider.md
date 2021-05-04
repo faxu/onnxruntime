@@ -113,7 +113,7 @@ In this case, there are three options:
 
 A complete sample of onnxruntime using the DirectML execution provider can be found under [samples/c_cxx/fns_candy_style_transfer](https://github.com/microsoft/onnxruntime/tree/master/samples//c_cxx/fns_candy_style_transfer).
 
-### Support Coverage
+## Support Coverage
 **ONNX Opset**
 
 The DirectML execution provider currently supports ONNX opset 11 ([ONNX v1.6](https://github.com/onnx/onnx/releases/tag/v1.6.0)). Evaluating models which require a higher opset version is not supported, and may produce unexpected results.

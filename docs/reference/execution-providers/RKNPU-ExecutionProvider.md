@@ -8,7 +8,7 @@ nav_order: 11
 # RKNPU Execution Provider
 *PREVIEW*
 
-RKNPU DDK is an advanced interface to access Rockchip NPU. RKNPU Execution Provider enables deep learning inference on Rockchip NPU via RKNPU DDK.
+RKNPU DDK is an advanced interface to access Rockchip NPU. The RKNPU Execution Provider enables deep learning inference on Rockchip NPU via RKNPU DDK.
 
 ## Contents
 {: .no_toc }
@@ -18,12 +18,12 @@ RKNPU DDK is an advanced interface to access Rockchip NPU. RKNPU Execution Provi
 
 
 ## Build 
-For build instructions, please see the [BUILD page](../../how-to/build-eps.md#RKNPU).
+For build instructions, please see the [BUILD page](../../how-to/build/eps.md#RKNPU).
 
 ## Usage
 **C/C++**
 
-To use RKNPU as execution provider for inferencing, please register it as below.
+To use RKNPU as an execution provider for inferencing, please register it as below.
 ```
 Ort::Env env = Ort::Env{ORT_LOGGING_LEVEL_ERROR, "Default"};
 Ort::SessionOptions sf;
@@ -35,12 +35,16 @@ The C API details are [here](../api/c-api.md).
 
 ## Support Coverage
 ### Supported Platform
+{: .no_toc }
+
 * RK1808 Linux
 
 *Note: RK3399Pro platform is not supported.*
 ### Supported Operators
+{: .no_toc }
 
-The table below shows the ONNX Ops supported using RKNPU Execution Provider and the mapping between ONNX Ops and RKNPU Ops.
+
+The table below shows the ONNX Ops supported using the RKNPU Execution Provider and the mapping between ONNX Ops and RKNPU Ops.
 
 | **ONNX Ops** | **RKNPU Ops** |
 | --- | --- |
@@ -70,8 +74,10 @@ The table below shows the ONNX Ops supported using RKNPU Execution Provider and 
 
 
 ### Supported Models
+{: .no_toc }
 
-Below Models are supported from ONNX open model zoo using RKNPU Execution Provider
+
+The following models from the ONNX model zoo are supported using the RKNPU Execution Provider
 
 **Image Classification**
 - squeezenet

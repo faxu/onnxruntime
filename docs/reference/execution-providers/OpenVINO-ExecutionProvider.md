@@ -17,7 +17,7 @@ OpenVINO Execution Provider enables deep learning inference on Intel CPUs, Intel
 {:toc}
 
 ## Build
-For build instructions, please see the [BUILD page](../../how-to/build-eps.md#openvino).
+For build instructions, please see the [BUILD page](../../how-to/build/eps.md#openvino).
 
 ## Usage
 **C#**

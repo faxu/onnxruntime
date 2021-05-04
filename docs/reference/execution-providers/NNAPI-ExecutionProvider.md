@@ -23,7 +23,7 @@ The NNAPI EP requires Android devices with Android 8.1 or higher, it is recommen
 
 ## Build
 
-For build instructions, please see the [BUILD page](../../how-to/build-eps.html#Android-NNAPI-Execution-Provider).
+For build instructions, please see the [BUILD page](../../how-to/build/eps.html#Android-NNAPI-Execution-Provider).
 
 ## Usage
 ### C/C++
@@ -81,6 +81,7 @@ Please first review the introductory details in [using NNAPI with ONNX Runtime M
 
 
 ### 1. ONNX Model Optimization Example
+{: .no_toc }
 
 ONNX Runtime applies optimizations to the ONNX model to improve inferencing performance. These optimizations occur prior to exporting an ORT format model. See the [graph optimization](../resources/graph-optimizations.html) documentation for further details of the available optimizations.
 
@@ -126,6 +127,7 @@ The _extended_ level optimizations introduce the custom FusedConv nodes, which t
 ![Changes to nodes by NNAPI EP depending on the optimization level the model was created with](../../../images/mnist_optimization_with_nnapi.png)
 
 ### 2. Initial Performance Testing
+{: .no_toc }
 
 The best optimization settings will differ by model. Some models may perform better with NNAPI, some models may not. As the performance will be model specific you must performance test to determine the best combination for your model.
 
@@ -138,6 +140,7 @@ For most scenarios it is expected that one of these two approaches will yield th
 If using an ORT format model with _basic_ level optimizations and NNAPI yields equivalent or better performance, it _may_ be possible to further improve performance by creating an NNAPI-aware ORT format model. The difference with this model is that the _extended_ optimizations are applied to nodes that can not be executed using NNAPI. Whether any nodes fall into this category is model dependent.
 
 ### 3. Creating an NNAPI-aware ORT format model
+{: .no_toc }
 
 An NNAPI-aware ORT format model will keep all nodes from the ONNX model that can be executed using NNAPI, and allow _extended_ optimizations to be applied to any remaining nodes.
 
