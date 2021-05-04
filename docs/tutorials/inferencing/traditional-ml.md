@@ -7,6 +7,8 @@ nav_order: 8
 ---
 
 # Deploy traditional ML models
+{: .no_toc }
+
 ONNX Runtime supports [ONNX-ML](https://github.com/onnx/onnx/blob/master/docs/Operators-ml.md) and can run traditional machine models created from libraries such as Sciki-learn, LightGBM, XGBoost, LibSVM, etc. 
 
 ## Contents
