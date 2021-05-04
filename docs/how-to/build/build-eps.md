@@ -2,7 +2,7 @@
 title: Build with various EPs
 parent: Build ORT
 grand_parent: How to
-nav_order: 1
+nav_order: 3
 ---
 
 # Build ONNX Runtime with Execution Providers
@@ -554,3 +554,27 @@ For instructions to setup the hardware environment: [Hardware setup](../referenc
 {: .no_toc }
 
 The Vitis-AI execution provider is only supported on Linux.
+
+---
+
+## AMD MIGraphX
+
+See more information on the MIGraphX Execution Provider [here](../reference/execution-providers/MIGraphX-ExecutionProvider.md).
+
+### Prerequisites
+{: .no_toc }
+
+* Install [ROCM](https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation-Guide.html)
+  * The MIGraphX execution provider for ONNX Runtime is built and tested with ROCM3.3
+* Install [MIGraphX](https://github.com/ROCmSoftwarePlatform/AMDMIGraphX)
+  * The path to MIGraphX installation must be provided via the `--migraphx_home parameter`.
+
+### Build Instructions
+
+#### Linux
+
+```bash
+./build.sh --config <Release|Debug|RelWithDebInfo> --use_migraphx --migraphx_home <path to MIGraphX home>
+```
+
+Dockerfile instructions are available [here](https://github.com/microsoft/onnxruntime/blob/master/dockerfiles#migraphx).

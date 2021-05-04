@@ -19,26 +19,11 @@ Details on OS versions, compilers, language versions, dependent libraries , etc 
 
 ## Inference
 
-### Requirements
-{: .no_toc }
-
-* All builds require the English language package with `en_US.UTF-8` locale. On Linux, install [language-pack-en package](https://packages.ubuntu.com/search?keywords=language-pack-en)
-by running `locale-gen en_US.UTF-8` and `update-locale LANG=en_US.UTF-8`
-
-* The GPU CUDA build requires installation of compatible CUDA and cuDNN libraries: see [CUDA Execution Provider requirements](../reference/execution-providers/CUDA-ExecutionProvider.html#requirements).
-
-* Windows builds require [Visual C++ 2019 runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
-
-### Published Builds
-{: .no_toc }
-
 The following build variants are available as officially supported packages. Others can be [built from source](../how-to/build.md) from each release branch.
 
 1. Default CPU Provider
 2. GPU Provider - NVIDIA CUDA
 3. GPU Provider - [DirectML](../reference/execution-providers/DirectML-ExecutionProvider.md) (Windows) - *recommended for optimized performance and compatibility with a broad set of GPUs on Windows devices*
-
-*Note: Dev builds created from the master branch are available for testing newer changes between official releases. Please use these at your own risk. We strongly advise against deploying these to production workloads as support is limited for dev builds.*
 
 |Repository|Official build|Nightly build|
 |---|---|---|
@@ -53,12 +38,18 @@ The following build variants are available as officially supported packages. Oth
 |Other|[Contributed non-official packages](https://docs.microsoft.com/en-us/windows/ai/windows-ml/get-started-uwp) (including Homebrew, Linuxbrew, and nixpkgs).<br/>*These are not maintained by the core ONNX Runtime team and may have limited support; use at your discretion.*|
 
 
-### Docker Images
+*Note: Dev builds created from the master branch are available for testing newer changes between official releases. Please use these at your own risk. We strongly advise against deploying these to production workloads as support is limited for dev builds.*
+
+### Requirements
 {: .no_toc }
 
-* [ONNX-Ecosystem](https://github.com/onnx/onnx-docker/tree/master/onnx-ecosystem): Includes ONNX, ONNX Runtime (CPU, Python), dependencies, tools to convert from various frameworks, and Jupyter notebooks to get started
-* [Dockerfiles for ONNX Runtime](https://github.com/microsoft/onnxruntime/tree/master/dockerfiles)
+* All builds require the English language package with `en_US.UTF-8` locale. On Linux, install [language-pack-en package](https://packages.ubuntu.com/search?keywords=language-pack-en)
+by running `locale-gen en_US.UTF-8` and `update-locale LANG=en_US.UTF-8`
+
+* The GPU CUDA build requires installation of compatible CUDA and cuDNN libraries: see [CUDA Execution Provider requirements](../reference/execution-providers/CUDA-ExecutionProvider.html#requirements).
+
+* Windows builds require [Visual C++ 2019 runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads).
+
 
 ## Training
-
 *COMING SOON*

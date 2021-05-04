@@ -16,8 +16,11 @@ nav_order: 1
 
 
 ## CPU
+Basic CPU build
 
 ### Prerequisites
+{: .no_toc }
+
 * Checkout the source tree:
    ```
    git clone --recursive https://github.com/Microsoft/onnxruntime
@@ -27,6 +30,7 @@ nav_order: 1
 
 
 ### Build Instructions
+{: .no_toc }
 
 #### Windows
 
@@ -99,7 +103,7 @@ GCC 4.x and below are not supported.
 
 ---
 
-### Common Build Instructions
+## Common Build Instructions
 
 |Description|Command|Additional details|
 |-----------|-----------|-----------|
@@ -115,45 +119,42 @@ GCC 4.x and below are not supported.
 |API|Command|Additional details|
 |-----------|-----------|-----------|
 |**Python**|--build_wheel||
-|**C# and C packages**|--build_nuget|Builds C# bindings and creates nuget package. Currently supported on Windows and Linux only. Implies `--build_shared_lib` <br> Detailed instructions can be found [below](#build-nuget-packages).|
+|**C# and C Nuget packages**|--build_nuget|Builds C# bindings and creates nuget package. Implies `--build_shared_lib` <br> Detailed instructions can be found [below](#build-nuget-packages).|
 |**WindowsML**|--use_winml<br>--use_dml<br>--build_shared_lib|WindowsML depends on DirectML and the OnnxRuntime shared library|
 |**Java**|--build_java|Creates an onnxruntime4j.jar in the build directory, implies `--build_shared_lib`<br>Compiling the Java API requires [gradle](https://gradle.org) v6.1+ to be installed in addition to the usual requirements.|
 |**Node.js**|--build_nodejs|Build Node.js binding. Implies `--build_shared_lib`|
 
----
-## Reduced Operator Kernel Build
-Reduced Operator Kernel builds allow you to customize the kernels in the build to provide smaller binary sizes - [see instructions](https://github.com/microsoft/onnxruntime/blob/master/docs/Reduced_Operator_Kernel_build.md).
 
-
-## Build ONNX Runtime Server on Linux
-Read more about ONNX Runtime Server [here](https://github.com/microsoft/onnxruntime/blob/master/docs/ONNX_Runtime_Server_Usage.md).
-
-Build instructions are [here](https://github.com/microsoft/onnxruntime/blob/master/docs/Server.md)
-
-## Build Nuget packages
+#### Build Nuget packages
 
 Currently only supported on Windows and Linux.
 
-### Prerequisites
+##### Prerequisites
 
 * dotnet is required for building csharp bindings and creating managed nuget package. Follow the instructions [here](https://dotnet.microsoft.com/download) to download dotnet. Tested with versions 2.1 and 3.1.
 * nuget.exe. Follow the instructions [here](https://docs.microsoft.com/en-us/nuget/install-nuget-client-tools#nugetexe-cli) to download nuget
   * On Windows, downloading nuget is straightforward and simply following the instructions above should work.
   * On Linux, nuget relies on Mono runtime and therefore this needs to be setup too. Above link has all the information to setup Mono and nuget. The instructions can directly be found [here](https://www.mono-project.com/docs/getting-started/install/). In some cases it is required to run `sudo apt-get install mono-complete` after installing mono.
 
-### Build Instructions
-#### Windows
+##### Build Instructions
+###### Windows
 ```
 .\build.bat --build_nuget
 ```
 
-#### Linux
+###### Linux
 ```
 ./build.sh --build_nuget
 ```
 Nuget packages are created under <native_build_dir>\nuget-artifacts
 
-## Options
+---
+
+## Other build options
+
+### Reduced Operator Kernel Build
+Reduced Operator Kernel builds allow you to customize the kernels in the build to provide smaller binary sizes - [see instructions](https://github.com/microsoft/onnxruntime/blob/master/docs/Reduced_Operator_Kernel_build.md).
+
 ### OpenMP
 #### Build Instructions
 ##### Windows
@@ -170,8 +171,6 @@ Nuget packages are created under <native_build_dir>\nuget-artifacts
 
 ### OpenBLAS
 #### Prerequisites
-
-* OpenBLAS
    * Windows: See build instructions [here](https://github.com/xianyi/OpenBLAS/wiki/How-to-use-OpenBLAS-in-Microsoft-Visual-Studio#build-openblas-for-universal-windows-platform)
    * Linux: Install the libopenblas-dev package `sudo apt-get install libopenblas-dev`
 
@@ -187,8 +186,6 @@ Nuget packages are created under <native_build_dir>\nuget-artifacts
 ```bash
 ./build.sh --use_openblas
 ```
-
----
 
 ### DebugNodeInputsOutputs
 OnnxRuntime supports build options for enabling debugging of intermediate tensor shapes and data.
@@ -703,26 +700,3 @@ Run one of the following build scripts from the ONNX Runtime repository root,
            --ios --ios_sysroot iphoneos --osx_arch arm64 --apple_deploy_target <minimal iOS version> \
            --xcode_code_signing_team_id <Your Apple developmemt team ID>
 ```
-
----
-
-### AMD MIGraphX
-
-See more information on the MIGraphX Execution Provider [here](../reference/execution-providers/MIGraphX-ExecutionProvider.md).
-
-#### Prerequisites
-
-* Install [ROCM](https://rocmdocs.amd.com/en/latest/Installation_Guide/Installation-Guide.html)
-  * The MIGraphX execution provider for ONNX Runtime is built and tested with ROCM3.3
-* Install [MIGraphX](https://github.com/ROCmSoftwarePlatform/AMDMIGraphX)
-  * The path to MIGraphX installation must be provided via the `--migraphx_home parameter`.
-
-#### Build Instructions
-
-##### Linux
-
-```bash
-./build.sh --config <Release|Debug|RelWithDebInfo> --use_migraphx --migraphx_home <path to MIGraphX home>
-```
-
-Dockerfile instructions are available [here](https://github.com/microsoft/onnxruntime/blob/master/dockerfiles#migraphx).

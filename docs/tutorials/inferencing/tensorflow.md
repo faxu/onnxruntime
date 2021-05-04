@@ -1,5 +1,5 @@
 ---
-title: Accelerate TensorFlow models
+title: Accelerate TensorFlow
 nav_order: 3
 grand_parent: Tutorials
 parent: Inferencing
