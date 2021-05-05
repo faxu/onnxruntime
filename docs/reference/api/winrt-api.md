@@ -26,7 +26,7 @@ Windows 8.1+
 
 ## Builds
 | Artifact| Description | Supported Platforms |
-|-----------|-------------|---------------------|
+|---|---|---|
 |[Microsoft.AI.MachineLearning](https://www.nuget.org/packages/Microsoft.AI.MachineLearning)|WinRT - CPU, GPU (DirectML)|Windows 8.1+|
 
 

@@ -9,11 +9,11 @@ nav_order: 4
 
 ONNX Runtime can accelerate training and inferencing popular Hugging Face NLP models. 
 
-## Contents
+<!-- ## Contents
 {: .no_toc }
 
 * TOC placeholder
-{:toc}
+{:toc} -->
 
 
 ## Accelerate Hugging Face model inferencing

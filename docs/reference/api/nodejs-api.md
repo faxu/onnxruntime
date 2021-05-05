@@ -33,6 +33,6 @@ Builds are published to **npm** and can be installed using `npm install`
 To use on platforms without pre-built binaries, you can [build Node.js binding from source]((../../how-to/build.md#apis-and-language-bindings)) and consume using `npm install <onnxruntime_repo_root>/nodejs/`. 
 
 ## Samples
-See [Tutorials: Basics - NodeJS](../../tutorials/inference/get-started.md#nodejs)
+See [Tutorials: Basics - NodeJS](../../tutorials/inferencing/api-basics.md#nodejs)
 
 

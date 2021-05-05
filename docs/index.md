@@ -8,6 +8,7 @@ nav_order: 1
 
 ONNX Runtime is an accelerator for machine learning models with multi platform support and a flexible interface to integrate with hardware-specific libraries. ONNX Runtime can be used with models from PyTorch, Tensorflow/Keras, TFLite, scikit-learn, and other frameworks.
 
+
 ## Contents
 {: .no_toc }
 
@@ -29,15 +30,19 @@ Examples use cases for ONNX Runtime Inferencing include:
 ### How it works
 {: .no_toc }
 
+The premise is simple. 
+1. **Get a model.** This can be trained from any framework that supports export/conversion to ONNX format. See the [tutorials](./tutorials/inferencing) for some of the popular frameworks/libraries. 
+2. **Load and run the model with ONNX Runtime.** See the [basic tutorials](./tutorials/basics) for running models in different languages.
+3. *(optional)* **Tune performance using various runtime configurations or hardware accelerators.** There are lots of options here - see [How to: Tune Performance](./how-to/tune-performance.md) as a starting point.
+
+Even without step 3, ONNX Runtime will often provide performance improvements over the original framework. 
+
 ONNX Runtime applies a number of graph optimizations on the model graph then partitions it into subgraphs based on available hardware-specific accelerators. Optimized computation kernels in core ONNX Runtime provide performance improvements and assigned subgraphs benefit from further acceleration from each [Execution Provider](../reference/execution-providers).
 
 ### Get started with ORT for inferencing
 {: .no_toc }
 
-* [Get Started: Inferencing](./tutorials/inferencing/get-started.html)
-* [ORT on Mobile](./tutorials/inferencing/mobile.html)
-* [ORT on IoT/Edge](./tutorials/inferencing/iot-edge.html)
-* [ORT with Azure Machine Learning](.tutorials/ecosystem.html#azure-machine-learning-services)
+See: [Tutorials: Inferencing](./tutorials/inferencing)
 
 
 ## ONNX Runtime for Training
@@ -52,7 +57,7 @@ Using the ORTModule class wrapper, ONNX Runtime for PyTorch runs the forward an
 ### Get started with ORT for training
 {: .no_toc }
 
-* [Get Started: Training](./tutorials/training/get-started.html)
+See [Tutorials: Training](./tutorials/training)
 
 
 

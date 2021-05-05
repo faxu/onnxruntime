@@ -26,7 +26,7 @@ Basic CPU build
    git clone --recursive https://github.com/Microsoft/onnxruntime
    cd onnxruntime
    ```
-* Install cmake-3.13 or higher from https://cmake.org/download/.
+* [Install](https://cmake.org/download/) cmake-3.13 or higher.
 
 
 ### Build Instructions

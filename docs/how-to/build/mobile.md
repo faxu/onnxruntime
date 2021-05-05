@@ -24,7 +24,7 @@ I.e., the custom build provides a set of kernels, and if that set satisfies a gi
 
 ## Create model and minimal build
 
-You will need a script from the ONNX Runtime repository and to also perform a custom build, so you will need to clone the repository locally. See [here](./build-inferencing.html#prerequisites) for initial steps.
+You will need a script from the ONNX Runtime repository and to also perform a custom build, so you will need to clone the repository locally. See [here](./inferencing.md#prerequisites) for initial steps.
 
 The directory the ONNX Runtime repository was cloned into is referred to as `<ONNX Runtime repository root>` in this documentation.
 
@@ -71,7 +71,7 @@ Running `'python <ORT repository root>/tools/python/convert_onnx_models_to_ort.p
 
 You will need to build ONNX Runtime from source to reduce the included operator kernels and other aspects of the binary.
 
-See [here](./build-inferencing.html#cpu) for the general ONNX Runtime build instructions.
+See [here](./inferencing.md#cpu) for the general ONNX Runtime build instructions.
 
 
 #### Binary size reduction options:
@@ -80,7 +80,7 @@ The follow options can be used to reduce the build size. Enable all options that
   - Reduce build to required operator kernels
     - Add `--include_ops_by_config <config file produced by step 1> --skip_tests` to the build parameters.
       - To enable operator type reduction, also add `--enable_reduced_operator_type_support`.
-    - See the documentation on the [Reduced Operator Kernel build](../../resources/reduced-ops-build.html) for more information. This step can also be done pre-build if needed.
+    - See the documentation on the [Reduced Operator Kernel build](../../resources/reduced-ops-build.md) for more information. This step can also be done pre-build if needed.
       - NOTE: This step will edit some of the ONNX Runtime source files to exclude unused kernels. If you wish to go back to creating a full build, or wish to change the operator kernels included, you should run `git reset --hard` or `git checkout HEAD -- ./onnxruntime/core/providers` to undo these changes.
 
   - Enable minimal build (`--minimal_build`)

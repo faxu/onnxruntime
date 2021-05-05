@@ -2,10 +2,12 @@
 title: Accelerate PyTorch training
 grand_parent: Tutorials
 parent: Training
-nav_order: 2
+nav_order: 1
 ---
 # Accelerate PyTorch model training
 {: .no_toc }
+
+* [Get Started: Basic PyTorch transformer model](https://github.com/microsoft/onnxruntime-training-examples/tree/master/getting-started)
 
 * [Accelerate pre-training of large BERT model](https://github.com/microsoft/onnxruntime-training-examples/tree/master/nvidia-bert)
 

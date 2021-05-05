@@ -35,4 +35,4 @@ For Python compiler version notes, see [this page](https://github.com/microsoft/
 [https://www.onnxruntime.ai/python](https://www.onnxruntime.ai/python/)
 
 ## Samples
-See [Tutorials: Basics - Python](../../tutorials/inference/get-started.html#python)
+See [Tutorials: Basics - Python](../../tutorials/inferencing/api-basics.md#python)
