@@ -25,7 +25,8 @@ In addition to using the in-box version of WinML, WinML can also be installed as
 Windows 8.1+
 
 ## Builds
-| Artifact| Description | Supported Platforms |
+
+|Artifact|Description|Supported Platforms|
 |---|---|---|
 |[Microsoft.AI.MachineLearning](https://www.nuget.org/packages/Microsoft.AI.MachineLearning)|WinRT - CPU, GPU (DirectML)|Windows 8.1+|
 

@@ -35,7 +35,6 @@ The following build variants are available as officially supported packages. Oth
 |Java|CPU: [**com.microsoft.onnxruntime/onnxruntime**](https://search.maven.org/artifact/com.microsoft.onnxruntime/onnxruntime)|
 ||GPU: [**com.microsoft.onnxruntime/onnxruntime_gpu**](https://search.maven.org/artifact/com.microsoft.onnxruntime/onnxruntime_gpu)|
 |nodejs|CPU: [**onnxruntime**](https://www.npmjs.com/package/onnxruntime)|
-|Other|[Contributed non-official packages](https://docs.microsoft.com/en-us/windows/ai/windows-ml/get-started-uwp) (including Homebrew, Linuxbrew, and nixpkgs).<br/>*These are not maintained by the core ONNX Runtime team and may have limited support; use at your discretion.*|
 
 
 *Note: Dev builds created from the master branch are available for testing newer changes between official releases. Please use these at your own risk. We strongly advise against deploying these to production workloads as support is limited for dev builds.*

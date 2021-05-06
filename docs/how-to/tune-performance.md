@@ -52,14 +52,14 @@ In both cases, you will get a JSON file which contains the detailed performance 
 
 ## Using different Execution Providers
 
-To learn more about different Execution Providers, see [docs/exeuction_providers](../reference/execution-providers).
+To learn more about different Execution Providers, see [docs/execution_providers](../reference/execution-providers).
 
 ### Build the EP
 {: .no_toc }
 
 **Python**
 
-Official Python packages on Pypi only support the default CPU (MLAS) and default GPU (CUDA) execution providers. For other execution providers, you need to [build from source](../how-to/build.md). The recommended instructions build the wheel with debug info in parallel.
+Official Python packages on Pypi only support the default CPU (MLAS) and default GPU (CUDA) execution providers. For other execution providers, you need to [build from source](../how-to/build/eps.md). The recommended instructions build the wheel with debug info in parallel.
 
 For example:
 
