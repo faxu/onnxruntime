@@ -186,4 +186,4 @@ To create an NNAPI-aware ORT format model please follow these steps.
 
     The python package from your 'full' build with NNAPI enabled must be installed for `--use_nnapi` to be a valid option
 
-This model can be used with [a minimal build that includes the NNAPI EP](../../how-to/build/mobile.md#create-a-minimal-build-for-android-with-nnapi-support).
+This model can be used with a minimal build that includes the NNAPI EP. See: [How to: Deploy ORT on mobile](../../how-to/deploy-on-mobile.md).

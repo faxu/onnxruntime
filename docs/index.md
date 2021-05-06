@@ -8,7 +8,6 @@ nav_order: 1
 
 ONNX Runtime is an accelerator for machine learning models with multi platform support and a flexible interface to integrate with hardware-specific libraries. ONNX Runtime can be used with models from PyTorch, Tensorflow/Keras, TFLite, scikit-learn, and other frameworks.
 
-
 ## Contents
 {: .no_toc }
 
@@ -17,6 +16,9 @@ ONNX Runtime is an accelerator for machine learning models with multi platform s
 
 
 ## ONNX Runtime for Inferencing
+
+
+**>> [Get started with ORT for inferencing](./tutorials/inferencing) <<**
 
 ONNX Runtime Inference powers machine learning models in key Microsoft products and services across Office, Azure, Bing, as well as dozens of community projects.
 
@@ -39,13 +41,13 @@ Even without step 3, ONNX Runtime will often provide performance improvements co
 
 ONNX Runtime applies a number of graph optimizations on the model graph then partitions it into subgraphs based on available hardware-specific accelerators. Optimized computation kernels in core ONNX Runtime provide performance improvements and assigned subgraphs benefit from further acceleration from each [Execution Provider](./reference/execution-providers).
 
-### >> [Get started with ORT for inferencing](./tutorials/inferencing) <<
-{: .no_toc }
 
 
 ---
 
 ## ONNX Runtime for Training
+**>> [Get started with ORT for training](./tutorials/training) <<**
+
 Released in April 2021, ONNX Runtime Training provides a one-line addition for existing PyTorch training scripts to accelerate training times. The current support is focused on large transformer models on multi-node NVIDIA GPUs, with more to come. 
 
 ### How it works
@@ -54,8 +56,6 @@ Released in April 2021, ONNX Runtime Training provides a one-line addition for e
 Using the ORTModule class wrapper, ONNX Runtime for PyTorch runs the forward and backward passes of the training script using an optimized automatically-exported ONNX computation graph. ORT Training uses the same graph optimizations as ORT Inferencing, allowing for model training acceleration. 
 
  
-### >> [Get started with ORT for training](./tutorials/training) <<
-{: .no_toc }
 
 
 

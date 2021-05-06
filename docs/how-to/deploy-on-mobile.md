@@ -7,7 +7,7 @@ nav_order: 5
 # Deploy ORT on mobile devices
 {: .no_toc }
 
-For an e2e tutorial, see [Tutorials: Deploy on mobile](../tutorials/inferencing/mobile.md)
+For a full tutorial, see [Tutorials: Deploy on mobile](../tutorials/inferencing/mobile.md).
 
 ## Contents
 {: .no_toc }
@@ -16,7 +16,7 @@ For an e2e tutorial, see [Tutorials: Deploy on mobile](../tutorials/inferencing/
 {:toc}
 
 ## Overview
-![Steps to build for mobile platforms](../../../images/mobile.png){:width="40%"}
+![Steps to build for mobile platforms](../../images/mobile.png){:width="40%"}
 
 ONNX Runtime supports an internal model format to minimize the build size for usage in mobile and embedded scenarios. An ONNX model can be converted to an internal ONNX Runtime format ('ORT format model') using the below instructions.
 
@@ -77,14 +77,14 @@ The follow options can be used to reduce the build size. Enable all options that
   - Reduce build to required operator kernels
     - Add `--include_ops_by_config <config file produced by step 1> --skip_tests` to the build parameters.
       - To enable operator type reduction, also add `--enable_reduced_operator_type_support`.
-    - See the documentation on the [Reduced Operator Kernel build](../../resources/reduced-ops-build.md) for more information. This step can also be done pre-build if needed.
+    - See the documentation on the [Reduced Operator Kernel build](./build/reduced.md) for more information. This step can also be done pre-build if needed.
       - NOTE: This step will edit some of the ONNX Runtime source files to exclude unused kernels. If you wish to go back to creating a full build, or wish to change the operator kernels included, you should run `git reset --hard` or `git checkout HEAD -- ./onnxruntime/core/providers` to undo these changes.
 
   - Enable minimal build (`--minimal_build`)
     - A minimal build will ONLY support loading and executing ORT format models.
     - RTTI is disabled by default in this build, unless the Python bindings (`--build_wheel`) are enabled.
     - If you wish to enable execution providers that compile kernels such as NNAPI specify `--minimal_build extended`.
-      - See [here](#using-nnapi-with-onnx-runtime-mobile) for more information about using NNAPI with ONNX Runtime Mobile on Android platforms
+      - See [here](#use-nnapi-with-onnx-runtime-mobile) for more information about using NNAPI with ONNX Runtime Mobile on Android platforms
 
   - Disable exceptions (`--disable_exceptions`)
     - Disables support for exceptions in the build.
@@ -168,7 +168,7 @@ To limit the optimization level when creating the ORT format models using `tools
 
 For NNAPI to be used on Android with ONNX Runtime Mobile, the NNAPI Execution Provider must be included in the minimal build.
 
-First, read the general instructions for [creating an Android build with NNAPI included](./build/android-ios.md#android-nnapi-execution-provider). These provide details on setting up the components required to create an Android build of ONNX Runtime, such as the Android NDK.
+First, read the general instructions for [creating an Android build with NNAPI included](../reference/execution-providers/NNAPI-ExecutionProvider.md). These provide details on setting up the components required to create an Android build of ONNX Runtime, such as the Android NDK.
 
 Once you have all the necessary components setup, follow the instructions to [create the minimal build](#2-Create-the-minimal-build), with the following changes:
   - Replace `--minimal_build` with `--minimal_build extended` to enable support for execution providers that dynamically create kernels at runtime, which is needed by the NNAPI Execution Provider.
