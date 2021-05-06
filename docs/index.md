@@ -40,6 +40,8 @@ Even without step 3, ONNX Runtime will often provide performance improvements co
 ONNX Runtime applies a number of graph optimizations on the model graph then partitions it into subgraphs based on available hardware-specific accelerators. Optimized computation kernels in core ONNX Runtime provide performance improvements and assigned subgraphs benefit from further acceleration from each [Execution Provider](./reference/execution-providers).
 
 ### >> [Get started with ORT for inferencing](./tutorials/inferencing) <<
+{: .no_toc }
+
 
 ---
 
@@ -53,6 +55,8 @@ Using the ORTModule class wrapper, ONNX Runtime for PyTorch runs the forward an
 
  
 ### >> [Get started with ORT for training](./tutorials/training) <<
+{: .no_toc }
+
 
 
 
