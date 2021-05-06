@@ -1,13 +1,18 @@
 ---
-title: Reduced Operators build
-parent: Resources
-nav_order: 4
+title: Build with reduced size
+grand_parent: How to
+parent: Build ORT
+nav_order: 5
 ---
 
-# Reduced Operators build
+# Build ORT with reduced size
 {: .no_toc }
 
-To reduce the compiled binary size of ONNX Runtime (ORT), the operator kernels included in the build can be reduced to just the kernels required by your model/s.
+For applications where package binary size is important, ONNX Runtime provides options to reduce the build size with some functional trade-offs.
+
+To reduce the compiled binary size of ONNX Runtime, the operator kernels included in the build can be reduced to just the kernels required by your model/s.
+
+For deployment on mobile devices specifically, please read more detailed guidance on [How to: Build for mobile](./mobile.md).
 
 ## Contents
 {: .no_toc }
@@ -21,8 +26,6 @@ To reduce the compiled binary size of ONNX Runtime (ORT), the operator kernels i
 A configuration file must be created with details of the kernels that are required.
 
 Following that, ORT must be manually built, providing the configuration file in the `--include_ops_by_config` parameter. The build process will update the ORT kernel registration source files to exclude the unused kernels.
-
-See the [build instructions](https://www.onnxruntime.ai/docs/how-to/build.html#build-instructions) for more details on building ORT.
 
 When building ORT with a reduced set of kernel registrations, `--skip_tests` **MUST** be specified as the kernel reduction will render many of the unit tests invalid.
 

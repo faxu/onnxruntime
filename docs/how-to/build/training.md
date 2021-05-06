@@ -1,11 +1,11 @@
 ---
-title: Build ORT for training
+title: Build for training
 parent: Build ORT
 grand_parent: How to
 nav_order: 2
 ---
 
-# Build ORT for training
+# Build ONNX Runtime for training
 {: .no_toc }
 
 ## Contents

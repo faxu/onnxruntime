@@ -1,7 +1,7 @@
 ---
 title: Add a new execution provider
 parent: How to
-nav_order: 6
+nav_order: 7
 ---
 
 # Add a new Execution Provider to ONNX Runtime
