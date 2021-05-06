@@ -52,7 +52,7 @@ In both cases, you will get a JSON file which contains the detailed performance 
 
 ## Using different Execution Providers
 
-To learn more about different Execution Providers, see [docs/execution_providers](../reference/execution-providers).
+To learn more about different Execution Providers, see [Reference: Execution Providers](../reference/execution-providers).
 
 ### Build the EP
 {: .no_toc }

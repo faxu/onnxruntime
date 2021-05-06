@@ -23,7 +23,7 @@ The NNAPI EP requires Android devices with Android 8.1 or higher, it is recommen
 
 ## Build
 
-For build instructions, please see the [BUILD page](../../how-to/build/eps.html#Android-NNAPI-Execution-Provider).
+For build instructions, please see [How to: Build for mobile](../../how-to/build/mobile.md).
 
 ## Usage
 ### C/C++
@@ -77,7 +77,7 @@ nnapi_flags |= NNAPI_FLAG_USE_FP16;
 
 ONNX Runtime Mobile with the NNAPI Execution Provider (EP) can be used to execute ORT format models on Android platforms using NNAPI. This section explains the details of how different optimizations affect performance, and provides some suggestions for performance testing with ORT format models.
 
-Please first review the introductory details in [using NNAPI with ONNX Runtime Mobile](../../how-to/mobile.html#Using-NNAPI-with-ONNX-Runtime-Mobile).
+Please first review the introductory details in [using NNAPI with ONNX Runtime Mobile](../../how-to/build/mobile.md#use-nnapi-with-onnx-runtime-mobile).
 
 
 ### 1. ONNX Model Optimization Example
@@ -150,7 +150,7 @@ For our MNIST model that would mean that after the _basic_ optimizations are app
 
 To create an NNAPI-aware ORT format model please follow these steps.
 
-1. Create a 'full' build of ONNX Runtime with the NNAPI EP by [building ONNX Runtime from source](../../how-to/build.html#cpu).
+1. Create a 'full' build of ONNX Runtime with the NNAPI EP by [building ONNX Runtime from source](../../how-to/build/inferencing.md#cpu).
 
     This build can be done on any platform, as the NNAPI EP can be used to create the ORT format model without the Android NNAPI library as there is no model execution in this process. When building add `--use_nnapi --build_shared_lib --build_wheel` to the build flags if any of those are missing.
 
@@ -178,7 +178,7 @@ To create an NNAPI-aware ORT format model please follow these steps.
             pip install -U build\Windows\RelWithDebIfo\RelWithDebIfo\dist\onnxruntime_noopenmp-1.5.2-cp37-cp37m-win_amd64.whl
         ```
 
-3. Create an NNAPI-aware ORT format model by running `convert_onnx_models_to_ort.py` as per the [standard instructions](../../how-to/mobile.html#Create-ORT-format-model-and-configuration-file-with-required-operators), with NNAPI enabled (`--use_nnapi`), and the optimization level set to _extended_ (`--optimization_level extended`). This will allow extended level optimizations to run on any nodes that NNAPI can not handle.
+3. Create an NNAPI-aware ORT format model by running `convert_onnx_models_to_ort.py` as per the [standard instructions](../../how-to/mobile.md#create-ort-format-model-and-configuration-file-with-required-operators), with NNAPI enabled (`--use_nnapi`), and the optimization level set to _extended_ (`--optimization_level extended`). This will allow extended level optimizations to run on any nodes that NNAPI can not handle.
 
         ```
         python <ORT repository root>/tools/python/convert_onnx_models_to_ort.py --use_nnapi --optimization_level extended /models
@@ -186,4 +186,4 @@ To create an NNAPI-aware ORT format model please follow these steps.
 
     The python package from your 'full' build with NNAPI enabled must be installed for `--use_nnapi` to be a valid option
 
-This model can be used with [a minimal build that includes the NNAPI EP](../../how-to/mobile.html#Create-a-minimal-build-for-Android-with-NNAPI-support).
+This model can be used with [a minimal build that includes the NNAPI EP](../../how-to/build/mobile.md#create-a-minimal-build-for-android-with-nnapi-support).

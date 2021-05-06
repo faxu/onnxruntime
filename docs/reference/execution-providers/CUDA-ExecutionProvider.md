@@ -31,7 +31,7 @@ Please reference table below for official GPU packages dependencies.
 For older versions, please reference the readme and build pages on the release branch.
 
 ## Build
-For build instructions, please see the [BUILD page](../../how-to/build/eps.md#CUDA).
+For build instructions, please see the [BUILD page](../../how-to/build/eps.md#cuda).
 
 ## Configuration Options
 The CUDA Execution Provider supports the following configuration options.

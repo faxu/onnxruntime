@@ -19,7 +19,7 @@ nav_order: 8
 
 
 ## Build
-For build instructions, please see the [BUILD page](../../how-to/build/eps.md#ARM-Compute-Library).
+For build instructions, please see the [BUILD page](../../how-to/build/eps.md#arm-compute-library).
 
 ## Usage
 ### C/C++

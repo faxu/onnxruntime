@@ -18,7 +18,7 @@ RKNPU DDK is an advanced interface to access Rockchip NPU. The RKNPU Execution P
 
 
 ## Build 
-For build instructions, please see the [BUILD page](../../how-to/build/eps.md#RKNPU).
+For build instructions, please see the [BUILD page](../../how-to/build/eps.md#rknpu).
 
 ## Usage
 **C/C++**
